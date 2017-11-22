@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>{{Italo Menezes}}</title>
+
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="fonts/virgo01_regular_macroman/virgo-stylesheet.css">
+    <link rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+
+    <!-- Scripts -->
+    <script src="vendor/angular/angular.min.js"></script>
+    <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+    <script src="vendor/jquery.easing.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.js"></script>
+
+    <!-- Config -->
+    <script src="js/main.js"></script>
+    <script src="js/scrolling-nav.js"></script>
+
+    <!-- Controllers -->
+    <script src="js/controllers/MainController.js"></script>
+
+</head>
+<body ng-app="italom" ng-controller="MainController"data-spy="scroll" data-target=".navbar" data-offset="30">
+
+    <!-- Navbar -->
+    <div ng-include="'views/navbar.html'"></div>
+
+    <!-- Contents -->
+    <section class="main-section" ng-include="'views/main.html'" id="page-top"></section>
+
+    <section class="common-section container" ng-include="'views/about.html'" id="about"></section>
+
+    <section class="common-section container" ng-include="'views/contact.html'" id="contact"></section>
+
+    <!-- Footer -->
+    <div ng-include="'views/footer.html'"></div>
+
+</body>
+</html>
