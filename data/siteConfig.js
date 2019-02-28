@@ -1,91 +1,133 @@
 module.exports = {
-  siteTitle: 'Francisco Santos',
-  siteDescription: `Create your online curriculum in just a few minutes with this starter`,
-  authorName: 'Francisco Santos',
-  twitterUsername: '_franciscodf',
-  githubUsername: 'santosfrancisco',
-  authorAvatar: '/images/avatar.jpeg',
-  authorDescription: `Developer, passionate about what I do. Always interested in how the sites were made, I started to study HTML by hobby. <br />
-    In 2012 I started working as a support technician and I approached the developers.
-    In 2015, I started to study C # and started to contribute with the team giving maintenance in an application in C # and .NET. <br />
-    I currently work as a frontend developer and mainly work with <strong>Javascript, NodeJS e React.</strong>`,
+  siteTitle: 'Italo Menezes',
+  siteDescription: `Site de Italo Menezes para apresentação de skills, experiências e contatos.`,
+  authorName: 'Italo Menezes',
+  twitterUsername: 'italomlp',
+  githubUsername: 'italomlp',
+  authorAvatar: '/images/avatar.jpg',
+  authorDescription: `Me chamo Italo Menezes. Tenho 21 anos e moro no interior de Pernambuco.
+    Trabalho como MEAN Stack (com AngularJS e Angular 2+) há mais de 2 anos, em vários sistemas,
+    envolvendo CRUDs dos mais simples aos mais complexos, aplicados principalmente em dashboards.
+    Curso Ciência da Computação, e tenho contato com Java 7, com padrões de design e boas práticas.
+    Atualmente, estou me aprofundando em React Native, ReatJS e todo o ecossistema em torno dessas
+    tecnologias. Já domino um pouco React Native, tendo feito um projeto acadêmico, projetos específicos
+    para o curso da RocketSeat (onde estou estudando) e caminhando com um projeto pessoal. Faço uso de
+    Redux e afins também.
+    No mais, sou apaixonado por código, café e javascript!`,
   skills: [
     {
       name: 'HTML',
-      level: 70
+      level: 70,
     },
     {
       name: 'CSS',
-      level: 60
+      level: 60,
     },
     {
       name: 'Javascript',
-      level: 50
+      level: 80,
+    },
+    {
+      name: 'TypeScript',
+      level: 75,
     },
     {
       name: 'NodeJs',
-      level: 40
+      level: 70,
+    },
+    {
+      name: 'Express',
+      level: 60,
+    },
+    {
+      name: 'MongoDB',
+      level: 50,
+    },
+    {
+      name: 'Angular',
+      level: 70,
     },
     {
       name: 'React',
-      level: 60
+      level: 40,
+    },
+    {
+      name: 'React Native',
+      level: 65,
+    },
+    {
+      name: 'Redux',
+      level: 50,
     },
     {
       name: 'Git',
-      level: 70
-    }
+      level: 70,
+    },
   ],
   jobs: [
     {
-      company: "Lendico",
+      company: 'Home',
       begin: {
-        month: 'apr',
-        year: '2018'
+        month: 'jan',
+        year: '2014',
       },
-      duration: null,
-      occupation: "Frontend developer",
-      description: "I integrate the Frontend team responsible for developing and maintaining the online lending platform."
-  
-    }, {
-      company: "Anapro",
-      begin: {
-        month: 'dec',
-        year: '2016'
-      },
-      duration: '1 yr e 5 mos',
-      occupation: "Fullstack developer",
-      description: "Development and maintenance, corrective and preventive, of web applications for the real estate market."
-    }, {
-      company: "Anapro",
+      duration: '1 ano',
+      occupation: 'Técnico (automação doméstica)',
+      description: 'Formatação e montagem de computadores.',
+    },
+    {
+      company: 'Embedded/Sony',
       begin: {
         month: 'set',
-        year: '2012'
+        year: '2016',
       },
-      duration: '4 yrs e 3 mos',
-      occupation: "Support Technician",
-      description: "Responsible for the implementation and parameterization of the system, training and customer support. Acting also in person in real estate launches guaranteeing the success and good use of the tool."
-  
+      duration: '3 meses',
+      occupation: 'Q&A Tester',
+      description:
+        'Participava da equipe de qualidade do Laboratório de Sistemas Embarcados (Embedded) na sala da Sony - UFCG, sendo responsável por auxiliar desenvolvedores no ambiente de desenvolvimento, e garantir qualidade de software através de testes.',
+    },
+    {
+      company: 'IgorZahir',
+      begin: {
+        month: 'nov',
+        year: '2018',
+      },
+      duration: '1 mês',
+      occupation: 'Web developer',
+      description:
+        'Construção de website para Igor Zahir (https://www.igorzahir.com)',
+    },
+    {
+      company: 'Home',
+      begin: {
+        month: 'jan',
+        year: '2017',
+      },
+      duration: null,
+      occupation: 'Fullstack developer',
+      description:
+        'Desenvolvedor Web full stack, utilizando MEAN Stack, trabalhando principalmente em dashboards para administração de sistemas de simples a complexos.',
     },
     /* ... */
   ],
   social: {
-    twitter: "https://twitter.com/_franciscodf",
-    linkedin: "https://www.linkedin.com/in/santos-francisco",
-    github: "https://github.com/santosfrancisco",
-    email: "yoshi.df@gmail.com"
+    twitter: 'https://twitter.com/italomlp',
+    linkedin: 'https://www.linkedin.com/in/italomlp',
+    github: 'https://github.com/italomlp',
+    email: 'italomlporoca@hotmail.com',
   },
-  siteUrl: 'https://santosfrancisco.github.io/gatsbystarter-cv',
-  pathPrefix: '/gatsby-starter-cv', // Note: it must *not* have a trailing slash.
+  siteUrl: 'https://www.italomlp.com',
+  pathPrefix: '/', // Note: it must *not* have a trailing slash.
   siteCover: '/images/cover.jpeg',
-  googleAnalyticsId: 'UA-131359385-1',
+  googleAnalyticsId: 'UA-114612231-1',
   background_color: '#ffffff',
   theme_color: '#25303B',
   display: 'minimal-ui',
   icon: 'src/assets/gatsby-icon.png',
   headerLinks: [
     {
-      label: 'Francisco Santos',
+      label: 'Italo Menezes',
       url: '/',
-    }
-  ]
+    },
+  ],
 }
