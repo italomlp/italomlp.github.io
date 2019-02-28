@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-cv",
+  "name": "italomlp",
   "private": true,
-  "description": "A simple starter to get up and developing your digital curriculum with GatsbyJS",
-  "version": "0.0.1",
-  "author": "Francisco Santos <yoshi.df@gmail.com>",
+  "description": "Italo Menezes' website",
+  "version": "2.0.0",
+  "author": "Italo Menezes <italomlporoca@hotmail.com>",
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.0",
     "gatsby": "^2.0.53",
@@ -26,7 +26,8 @@
     "styled-components": "^4.1.3"
   },
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "italomlp"
   ],
   "license": "MIT",
   "scripts": {
@@ -43,9 +44,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/santosfrancisco/gatsby-starter-cv"
-  },
-  "bugs": {
-    "url": "https://github.com/santosfrancisco/gatsby-starter-cv/issues"
+    "url": "https://github.com/italomlp/italomlp.github.io"
   }
 }
