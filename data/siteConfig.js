@@ -108,7 +108,17 @@ module.exports = {
       description:
         'Desenvolvedor Web full stack, utilizando MEAN Stack, trabalhando principalmente em dashboards para administração de sistemas de simples a complexos.',
     },
-    /* ... */
+    {
+      company: 'IgorZahir',
+      begin: {
+        month: 'mar',
+        year: '2019',
+      },
+      duration: '1 sem',
+      occupation: 'Web developer',
+      description:
+        'Construção de website para plataforma de tendências Novum (https://novum.igorzahir.com)',
+    },
   ],
   social: {
     twitter: 'https://twitter.com/italomlp',
@@ -130,4 +140,4 @@ module.exports = {
       url: '/',
     },
   ],
-}
+};
