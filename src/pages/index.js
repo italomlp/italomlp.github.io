@@ -31,6 +31,9 @@ class Home extends React.Component {
             'curriculum',
             'italomlp',
             'italomenezes',
+            'italo menezes',
+            'italo menezes de lima',
+            'italo menezes de lima poroca'
           ]}
         />
 
