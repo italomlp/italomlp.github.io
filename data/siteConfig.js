@@ -1,9 +1,11 @@
 module.exports = {
   siteTitle: 'Italo Menezes',
-  siteDescription: `Site de Italo Menezes para apresentação de skills, experiências e contatos.`,
+  siteDescription:
+    'Site de Italo Menezes para apresentação de skills, experiências e contatos.',
   authorName: 'Italo Menezes',
   twitterUsername: 'italomlp',
   githubUsername: 'italomlp',
+  devToUsername: 'italomlp',
   authorAvatar: '/images/avatar.jpg',
   authorDescription: `Me chamo Italo Menezes. Tenho 21 anos e moro no interior de Pernambuco.
     Trabalho como MEAN Stack (com AngularJS e Angular 2+) há mais de 2 anos, em vários sistemas,
@@ -11,8 +13,8 @@ module.exports = {
     Curso Ciência da Computação, e tenho contato com Java 7, com padrões de design e boas práticas.
     Atualmente, estou me aprofundando em React Native, ReatJS e todo o ecossistema em torno dessas
     tecnologias. Já domino um pouco React Native, tendo feito um projeto acadêmico, projetos específicos
-    para o curso da RocketSeat (onde estou estudando) e caminhando com um projeto pessoal. Faço uso de
-    Redux e afins também.
+    para o curso da RocketSeat (onde estou estudando), trabalhando com isso atualmente e caminhando
+    com um projeto pessoal. Faço uso de Redux e afins também.
     No mais, sou apaixonado por código, café e javascript!`,
   skills: [
     {
@@ -29,7 +31,7 @@ module.exports = {
     },
     {
       name: 'TypeScript',
-      level: 75,
+      level: 80,
     },
     {
       name: 'NodeJs',
@@ -41,7 +43,7 @@ module.exports = {
     },
     {
       name: 'MongoDB',
-      level: 50,
+      level: 60,
     },
     {
       name: 'Angular',
@@ -49,19 +51,23 @@ module.exports = {
     },
     {
       name: 'React',
-      level: 40,
+      level: 60,
     },
     {
       name: 'React Native',
-      level: 65,
+      level: 80,
     },
     {
       name: 'Redux',
-      level: 50,
+      level: 60,
     },
     {
       name: 'Git',
       level: 70,
+    },
+    {
+      name: 'Writing about programming',
+      level: 30,
     },
   ],
   jobs: [
@@ -138,6 +144,10 @@ module.exports = {
     {
       label: 'Italo Menezes',
       url: '/',
+    },
+    {
+      label: 'Posts',
+      url: '/posts',
     },
   ],
 };
