@@ -5,7 +5,6 @@ module.exports = {
   authorName: 'Italo Menezes',
   twitterUsername: 'italomlp',
   githubUsername: 'italomlp',
-  devToUsername: 'italomlp',
   authorAvatar: '/images/avatar.jpg',
   authorDescription: `Me chamo Italo Menezes. Tenho 21 anos e moro no interior de Pernambuco.
     Trabalho como MEAN Stack (com AngularJS e Angular 2+) há mais de 2 anos, em vários sistemas,
@@ -130,6 +129,7 @@ module.exports = {
     twitter: 'https://twitter.com/italomlp',
     linkedin: 'https://www.linkedin.com/in/italomlp',
     github: 'https://github.com/italomlp',
+    devTo: 'https://dev.to/italomlp',
     email: 'italomlporoca@hotmail.com',
   },
   siteUrl: 'https://www.italomlp.com',

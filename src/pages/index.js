@@ -1,26 +1,32 @@
-import React from 'react'
-import styled from 'styled-components'
-import { Container, Row, Col } from 'react-awesome-styled-grid'
-import { FaGithub, FaLinkedin, FaEnvelope, FaTwitter } from 'react-icons/fa'
-import siteConfig from '../../data/siteConfig'
+import React from 'react';
+import styled from 'styled-components';
+import { Container, Row, Col } from 'react-awesome-styled-grid';
+import {
+  FaGithub,
+  FaLinkedin,
+  FaEnvelope,
+  FaTwitter,
+  FaDev,
+} from 'react-icons/fa';
+import siteConfig from '../../data/siteConfig';
 
-import Layout from '../components/layout'
-import Hero from '../components/hero'
-import SEO from '../components/SEO'
-import Wrapper from '../components/wrapper'
-import About from '../components/about'
-import Skills from '../components/skills'
-import Timeline from '../components/timeline'
-import Repositories from '../components/repositories'
+import Layout from '../components/layout';
+import Hero from '../components/hero';
+import SEO from '../components/SEO';
+import Wrapper from '../components/wrapper';
+import About from '../components/about';
+import Skills from '../components/skills';
+import Timeline from '../components/timeline';
+import Repositories from '../components/repositories';
 
 const Separator = styled.hr`
   margin-top: 24px;
   margin-bottom: 16px;
-`
+`;
 
 class Home extends React.Component {
   render() {
-    const title = 'Oi! Eu sou Italo!'
+    const title = 'Oi! Eu sou Italo!';
     return (
       <Layout location={this.props.location}>
         <SEO
@@ -33,7 +39,7 @@ class Home extends React.Component {
             'italomenezes',
             'italo menezes',
             'italo menezes de lima',
-            'italo menezes de lima poroca'
+            'italo menezes de lima poroca',
           ]}
         />
 
@@ -57,6 +63,16 @@ class Home extends React.Component {
                       href={siteConfig.social.github}
                     >
                       <FaGithub className="social-icon" size="32" />
+                    </a>
+                  )}
+                  {siteConfig.social.devTo && (
+                    <a
+                      className="social-link devTo"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href={siteConfig.social.devTo}
+                    >
+                      <FaDev className="social-icon" size="32" />
                     </a>
                   )}
                   {siteConfig.social.linkedin && (
@@ -107,7 +123,7 @@ class Home extends React.Component {
           </Container>
         </Wrapper>
       </Layout>
-    )
+    );
   }
 }
 
@@ -147,6 +163,10 @@ export default styled(Home)`
     color: #24292e;
   }
 
+  a.social-link.devTo:hover {
+    color: #000000;
+  }
+
   a.social-link.linkedin:hover {
     color: #0077b5;
   }
@@ -154,4 +174,4 @@ export default styled(Home)`
   a.social-link.email:hover {
     color: #c23a2b;
   }
-`
+`;
