@@ -1,38 +1,41 @@
-const config = require("./data/siteConfig");
+/**
+ * Configure your Gatsby site with this file.
+ *
+ * See: https://www.gatsbyjs.org/docs/gatsby-config/
+ */
+const path = require('path');
+const config = require('./data/config');
 
 module.exports = {
-  siteMetadata: {
-    title: config.siteTitle,
-    description: config.siteDescription,
-    author: config.authorName,
-    ...config
-  },
-  pathPrefix: config.pathPrefix,
+  siteMetadata: config,
   plugins: [
-    `gatsby-plugin-react-helmet`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: 'gatsby-plugin-typescript',
       options: {
-        name: config.siteTitle,
-        short_name: config.siteTitle,
-        start_url: config.pathPrefix,
-        background_color: config.background_color,
-        theme_color: config.theme_color,
-        display: config.display,
-        icon: config.icon,
+        isTSX: true,
+        allExtensions: true,
       },
     },
-    `gatsby-plugin-styled-components`,
+    {
+      resolve: 'gatsby-plugin-root-import',
+      options: {
+        '~': path.join(__dirname, 'src'),
+      },
+    },
+    'gatsby-plugin-eslint',
+    'gatsby-plugin-react-helmet',
+    {
+      resolve: `gatsby-plugin-styled-components`,
+      options: {
+        // Add any options here
+      },
+    },
+    'gatsby-plugin-sitemap',
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: config.googleAnalyticsId,
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.app/offline
-    // 'gatsby-plugin-offline',
   ],
-}
+};
