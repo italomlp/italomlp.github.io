@@ -57,6 +57,8 @@ module.exports = {
         tsx: 'never',
       },
     ],
+    'react/prop-types': [2, { ignore: ['children'] }],
+    'react/no-unescaped-entities': 'off',
   },
   settings: {
     'import/parsers': {

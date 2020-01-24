@@ -28,7 +28,7 @@ module.exports = {
     secondaryEmail: 'contato@italomlp.com',
   },
   siteUrl: 'https://www.italomlp.com',
-  pathPrefix: '/', // Note: it must *not* have a trailing slash.
+  pathPrefix: '/',
   siteCover: '/images/cover.jpeg',
   googleAnalyticsId: 'UA-114612231-1',
   backgroundColor: '#ffffff',
