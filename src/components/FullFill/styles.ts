@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+
 import colors from '~/styles/colors';
 
 export type ContainerProps = {
@@ -13,8 +14,8 @@ export type ContainerProps = {
 
 const baseSkew = `
   content: '';
-  width: 0; 
-  height: 0; 
+  width: 0;
+  height: 0;
   position: absolute;
   bottom: 100%;
   left: 0;
@@ -51,7 +52,8 @@ const mountSkew = (props: ContainerProps) => {
 };
 
 export const Container = styled.div<ContainerProps>`
-  height: 100%;
+  min-height: 100vh;
+  /* height: 100%; */
   background: ${props => (props.bgColor ? colors[props.bgColor] : '#fff')};
   box-sizing: initial;
   color: ${props => {
@@ -64,6 +66,10 @@ export const Container = styled.div<ContainerProps>`
     return props.textColor;
   }};
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding-bottom: ${props => (props.willBeSkewd ? '20px' : '0')};
   ${mountSkew}
 

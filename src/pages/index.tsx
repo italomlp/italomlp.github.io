@@ -27,26 +27,28 @@ export default function Home() {
           <a href="/">Home</a>
           <a href="/">Sobre</a>
         </Menu>
-        <main id="page-wrap">
-          <FullFill bgColor="primary" customInnerPadding={0}>
-            <Intro />
-          </FullFill>
-          <FullFill skew>
-            <Resume />
-          </FullFill>
-          <FullFill skew bgColor="secondary">
-            <Skills />
-          </FullFill>
-          <FullFill skew skewInverse>
-            <Experience />
-          </FullFill>
-          <FullFill skew bgColor="other">
-            <Links />
-          </FullFill>
-          {/* <FullFill skew skewInverse>
-            Contact
-          </FullFill> */}
-        </main>
+        <div id="page-wrap">
+          <div style={{ width: '100%', height: '100%' }}>
+            <FullFill scrollName="top" bgColor="primary" customInnerPadding={0}>
+              <Intro />
+            </FullFill>
+            <FullFill scrollName="resume" skew bgColor="otherLight">
+              <Resume />
+            </FullFill>
+            <FullFill scrollName="skills" skew bgColor="other">
+              <Skills />
+            </FullFill>
+            <FullFill scrollName="experience" skew skewInverse>
+              <Experience />
+            </FullFill>
+            <FullFill scrollName="links" skew bgColor="other">
+              <Links />
+            </FullFill>
+            {/* <FullFill skew skewInverse>
+              Contact
+            </FullFill> */}
+          </div>
+        </div>
       </div>
     </Layout>
   );

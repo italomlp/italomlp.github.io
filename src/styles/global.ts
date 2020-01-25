@@ -1,5 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import 'hover.css/css/hover-min.css';
+import 'rc-progress/assets/index.css';
 
 import colors from './colors';
 
@@ -113,9 +114,10 @@ export default createGlobalStyle`
   }
 
   #outer-container,
-  #outer-container main {
+  #outer-container #page-wrap {
     width: 100vw;
     height: 100vh;
+    overflow-y: auto;
   }
 
 `;

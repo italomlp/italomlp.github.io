@@ -1,4 +1,5 @@
 import React from 'react';
+import Slide from 'react-reveal/Slide';
 
 import { Container, ContainerProps } from './styles';
 
@@ -10,12 +11,15 @@ type Props = {
     | React.ReactChildren[]
     | React.ReactElement
     | React.ReactElement[];
+  scrollName: string;
 } & ContainerProps;
 
-export default function FullFill({ children, ...rest }: Props) {
+export default function FullFill({ children, scrollName, ...rest }: Props) {
   return (
-    <Container {...rest}>
-      <div>{children}</div>
+    <Container id={scrollName} {...rest}>
+      <Slide left>
+        <div>{children}</div>
+      </Slide>
     </Container>
   );
 }

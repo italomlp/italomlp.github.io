@@ -4,8 +4,8 @@ import media from 'styled-media-query';
 import colors from '~/styles/colors';
 
 export const Container = styled.div`
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background: url('assets/pattern.svg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -27,6 +27,7 @@ export const IntroContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 
   > div {
     margin-bottom: 20px;

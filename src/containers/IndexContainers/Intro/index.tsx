@@ -1,9 +1,15 @@
 import React from 'react';
 import TextLoop from 'react-text-loop';
-import { Container, Content, ButtonsContainer, IntroContainer } from './styles';
+// import { scroller } from 'react-scroll';
+
 import { Button } from '~/components';
 
+import { Container, Content, ButtonsContainer, IntroContainer } from './styles';
+import useScrollTo from '~/helpers/hooks/useScrollTo';
+
 export default function Intro() {
+  const { scroll } = useScrollTo();
+
   return (
     <Container>
       <Content>
@@ -20,8 +26,12 @@ export default function Intro() {
           <h1>Prazer, Italo Menezes!</h1>
         </IntroContainer>
         <ButtonsContainer>
-          <Button typeColor="primary">Sobre</Button>
-          <Button typeColor="secondary">Contato</Button>
+          <Button typeColor="primary" onClick={() => scroll('resume')}>
+            Sobre
+          </Button>
+          <Button typeColor="secondary" onClick={() => scroll('links')}>
+            Contato
+          </Button>
         </ButtonsContainer>
       </Content>
     </Container>
