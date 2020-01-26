@@ -21,6 +21,7 @@
     "gatsby": "^2.18.12",
     "gatsby-plugin-eslint": "^2.0.8",
     "gatsby-plugin-google-analytics": "^2.1.31",
+    "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-react-helmet": "^3.1.18",
     "gatsby-plugin-sitemap": "^2.2.24",
     "gatsby-plugin-styled-components": "^3.1.16",

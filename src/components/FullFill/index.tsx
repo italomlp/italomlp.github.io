@@ -1,5 +1,4 @@
 import React from 'react';
-import Slide from 'react-reveal/Slide';
 
 import { Container, ContainerProps } from './styles';
 
@@ -17,9 +16,7 @@ type Props = {
 export default function FullFill({ children, scrollName, ...rest }: Props) {
   return (
     <Container id={scrollName} {...rest}>
-      <Slide left>
-        <div>{children}</div>
-      </Slide>
+      <div>{children}</div>
     </Container>
   );
 }

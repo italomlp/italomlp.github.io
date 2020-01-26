@@ -37,5 +37,12 @@ module.exports = {
         trackingId: config.googleAnalyticsId,
       },
     },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`Oswald:400,500,600,700`, `Montserrat:400,500,700`],
+        display: 'swap',
+      },
+    },
   ],
 };

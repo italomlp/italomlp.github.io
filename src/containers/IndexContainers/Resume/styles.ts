@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import media from 'styled-media-query';
 
+import colors from '~/styles/colors';
+
 export const Container = styled.div`
   width: 100%;
   height: 100%;
@@ -15,6 +17,7 @@ export const Content = styled.div`
   align-items: center;
   padding-bottom: 20px;
   max-width: 80%;
+  font-weight: 400;
 
   ${media.lessThan('medium')`
     flex-direction: column;
@@ -22,10 +25,17 @@ export const Content = styled.div`
   `}
 `;
 
+export const TextContainer = styled.div`
+  h2 {
+    margin-bottom: 15px;
+  }
+`;
+
 export const Avatar = styled.img`
   border-radius: 20px;
+  border: 2px solid ${colors.primary};
   max-width: 400px;
-  margin-right: 20px;
+  margin-right: 30px;
 
   ${media.lessThan('large')`
     width: 40%;

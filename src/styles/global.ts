@@ -10,6 +10,10 @@ export default createGlobalStyle`
     padding: 0;
     outline: 0;
     box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+  }
+  h1, h2, h3, h4, h5 {
+    font-family: 'Oswald', sans-serif;
   }
   html, body, #root {
     width: 100%;

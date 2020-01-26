@@ -1,5 +1,6 @@
 import React from 'react';
 import { push as Menu } from 'react-burger-menu';
+import Fade from 'react-reveal/Fade';
 
 import { FiMenu } from 'react-icons/fi';
 
@@ -28,26 +29,37 @@ export default function Home() {
           <a href="/">Sobre</a>
         </Menu>
         <div id="page-wrap">
-          <div style={{ width: '100%', height: '100%' }}>
-            <FullFill scrollName="top" bgColor="primary" customInnerPadding={0}>
-              <Intro />
-            </FullFill>
-            <FullFill scrollName="resume" skew bgColor="otherLight">
-              <Resume />
-            </FullFill>
-            <FullFill scrollName="skills" skew bgColor="other">
-              <Skills />
-            </FullFill>
-            <FullFill scrollName="experience" skew skewInverse>
-              <Experience />
-            </FullFill>
-            <FullFill scrollName="links" skew bgColor="other">
-              <Links />
-            </FullFill>
-            {/* <FullFill skew skewInverse>
-              Contact
-            </FullFill> */}
-          </div>
+          <Fade>
+            <div style={{ width: '100%', height: '100%' }}>
+              <FullFill
+                scrollName="top"
+                bgColor="primary"
+                customInnerPadding={0}
+              >
+                <Intro />
+              </FullFill>
+              <FullFill scrollName="resume" skew bgColor="other">
+                <Resume />
+              </FullFill>
+              <FullFill
+                scrollName="skills"
+                skew
+                bgColor="otherDark"
+                textColorInverse
+              >
+                <Skills />
+              </FullFill>
+              <FullFill scrollName="experience" skew skewInverse>
+                <Experience />
+              </FullFill>
+              <FullFill scrollName="links" skew bgColor="other">
+                <Links />
+              </FullFill>
+              {/* <FullFill skew skewInverse>
+                Contact
+              </FullFill> */}
+            </div>
+          </Fade>
         </div>
       </div>
     </Layout>
