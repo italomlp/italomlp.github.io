@@ -49,10 +49,21 @@ export default function Home() {
               >
                 <Skills />
               </FullFill>
-              <FullFill scrollName="experience" skew skewInverse>
+              <FullFill
+                scrollName="experience"
+                bgColor="secondaryDark"
+                textColorInverse
+                skew
+                skewInverse
+              >
                 <Experience />
               </FullFill>
-              <FullFill scrollName="links" skew bgColor="other">
+              <FullFill
+                scrollName="links"
+                skew
+                bgColor="other"
+                fullFill={false}
+              >
                 <Links />
               </FullFill>
               {/* <FullFill skew skewInverse>

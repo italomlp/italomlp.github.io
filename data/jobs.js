@@ -39,8 +39,8 @@ module.exports = [
     },
     duration: '1 mês',
     occupation: 'Web developer',
-    description:
-      'Construção de website para Igor Zahir (https://www.igorzahir.com)',
+    description: 'Construção de website para Igor Zahir',
+    links: [{ title: 'Site', url: 'https://www.igorzahir.com' }],
   },
   {
     company: 'IgorZahir',
@@ -50,7 +50,7 @@ module.exports = [
     },
     duration: '1 sem',
     occupation: 'Web developer',
-    description:
-      'Construção de website para plataforma de tendências Novum (https://novum.igorzahir.com)',
+    description: 'Construção de website para plataforma de tendências Novum',
+    links: [{ title: 'Site', url: 'https://novum.igorzahir.com' }],
   },
 ];

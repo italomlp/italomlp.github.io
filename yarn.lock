@@ -830,6 +830,53 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
+"@bit/nexxtway.react-rainbow.activity-timeline@^1.10.0":
+  version "1.10.0"
+  resolved "https://node.bit.dev/nexxtway.react-rainbow.activity-timeline/-/nexxtway.react-rainbow.activity-timeline-1.10.0.tgz#bd79fdbeb00fed70b5271a419376b88bf52e87c9"
+  integrity sha1-vXn9vrAP7XC1JxpBk3a4i/Uuh8k=
+  dependencies:
+    "@bit/nexxtway.react-rainbow.types" "1.10.0"
+    prop-types "^15.6.2"
+    styled-components "^4.3.2"
+
+"@bit/nexxtway.react-rainbow.libs.colors@1.10.0":
+  version "1.10.0"
+  resolved "https://node.bit.dev/nexxtway.react-rainbow.libs.colors/-/nexxtway.react-rainbow.libs.colors-1.10.0.tgz#5eb4c78fbfd3bd26b525e7d51e280a6469d711ed"
+  integrity sha1-XrTHj7/TvSa1JefVHigKZGnXEe0=
+
+"@bit/nexxtway.react-rainbow.libs.font-sizes@1.10.0":
+  version "1.10.0"
+  resolved "https://node.bit.dev/nexxtway.react-rainbow.libs.font-sizes/-/nexxtway.react-rainbow.libs.font-sizes-1.10.0.tgz#50041a4be3aa95880a537bf1322b52d22cc7d497"
+  integrity sha1-UAQaS+OqlYgKU3vxMitS0izH1Jc=
+
+"@bit/nexxtway.react-rainbow.libs.margins@1.10.0":
+  version "1.10.0"
+  resolved "https://node.bit.dev/nexxtway.react-rainbow.libs.margins/-/nexxtway.react-rainbow.libs.margins-1.10.0.tgz#882df40a6ad75e89a3b4f0e894ac1d33df1032ee"
+  integrity sha1-iC30CmrXXomjtPDolKwdM98QMu4=
+
+"@bit/nexxtway.react-rainbow.libs.paddings@1.10.0":
+  version "1.10.0"
+  resolved "https://node.bit.dev/nexxtway.react-rainbow.libs.paddings/-/nexxtway.react-rainbow.libs.paddings-1.10.0.tgz#f155246f0c29b6548d1d766c7bc18751f19ed5bd"
+  integrity sha1-8VUkbwwptlSNHXZse8GHUfGe1b0=
+
+"@bit/nexxtway.react-rainbow.timeline-marker@^1.10.0":
+  version "1.10.0"
+  resolved "https://node.bit.dev/nexxtway.react-rainbow.timeline-marker/-/nexxtway.react-rainbow.timeline-marker-1.10.0.tgz#2a6a24d780c2ca99bf10cfe0a0a3e3fff18454bf"
+  integrity sha1-Kmok14DCypm/EM/goKPj//GEVL8=
+  dependencies:
+    "@bit/nexxtway.react-rainbow.libs.colors" "1.10.0"
+    "@bit/nexxtway.react-rainbow.libs.font-sizes" "1.10.0"
+    "@bit/nexxtway.react-rainbow.libs.margins" "1.10.0"
+    "@bit/nexxtway.react-rainbow.libs.paddings" "1.10.0"
+    "@bit/nexxtway.react-rainbow.types" "1.10.0"
+    prop-types "^15.6.2"
+    styled-components "^4.3.2"
+
+"@bit/nexxtway.react-rainbow.types@1.10.0":
+  version "1.10.0"
+  resolved "https://node.bit.dev/nexxtway.react-rainbow.types/-/nexxtway.react-rainbow.types-1.10.0.tgz#e08706a0dbc6c029ba7f2a37e50f52285155b1ad"
+  integrity sha1-4IcGoNvGwCm6fyo35Q9SKFFVsa0=
+
 "@emotion/is-prop-valid@^0.8.1":
   version "0.8.6"
   resolved "https://registry.yarnpkg.com/@emotion/is-prop-valid/-/is-prop-valid-0.8.6.tgz#4757646f0a58e9dec614c47c838e7147d88c263c"
@@ -9818,7 +9865,7 @@ style-loader@^0.23.1:
     loader-utils "^1.1.0"
     schema-utils "^1.0.0"
 
-styled-components@^4.4.1:
+styled-components@^4.3.2, styled-components@^4.4.1:
   version "4.4.1"
   resolved "https://registry.yarnpkg.com/styled-components/-/styled-components-4.4.1.tgz#e0631e889f01db67df4de576fedaca463f05c2f2"
   integrity sha512-RNqj14kYzw++6Sr38n7197xG33ipEOktGElty4I70IKzQF1jzaD1U4xQ+Ny/i03UUhHlC5NWEO+d8olRCDji6g==

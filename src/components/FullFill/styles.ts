@@ -10,6 +10,7 @@ export type ContainerProps = {
   willBeSkewd?: boolean;
   bgColor?: keyof Omit<typeof colors, 'light' | 'dark'>;
   customInnerPadding?: number;
+  fullFill?: boolean;
 };
 
 const baseSkew = `
@@ -52,7 +53,10 @@ const mountSkew = (props: ContainerProps) => {
 };
 
 export const Container = styled.div<ContainerProps>`
-  min-height: 100vh;
+  min-height: ${props =>
+    props.fullFill || typeof props.fullFill !== 'boolean'
+      ? '100vh'
+      : 'initial'};
   /* height: 100%; */
   background: ${props => (props.bgColor ? colors[props.bgColor] : '#fff')};
   box-sizing: initial;
