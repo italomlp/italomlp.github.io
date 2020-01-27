@@ -57,7 +57,7 @@ module.exports = {
     },
     {
       resolve: 'gatsby-plugin-exclude',
-      options: { paths: ['/**/styles*'] },
+      options: { paths: ['/**/*styles*'] },
     },
   ],
 };

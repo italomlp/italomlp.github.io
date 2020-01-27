@@ -10,7 +10,9 @@
     "site": "Site",
     "app": "App",
     "source": "Source code",
-    "post": "Post"
+    "post": "Post",
+    "notFound": "Not found",
+    "home": "Home"
   },
   "sectionNames": {
     "about": "About",

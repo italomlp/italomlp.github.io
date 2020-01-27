@@ -10,7 +10,9 @@
     "site": "Site",
     "app": "Aplicativo",
     "source": "Código fonte",
-    "post": "Publicação"
+    "post": "Publicação",
+    "notFound": "Não encontrado",
+    "home": "Início"
   },
   "sectionNames": {
     "about": "Sobre",
