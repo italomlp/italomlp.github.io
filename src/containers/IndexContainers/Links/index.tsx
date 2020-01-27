@@ -1,5 +1,6 @@
 import React from 'react';
 import * as AllIcons from 'react-icons/fa';
+import Fade from 'react-reveal/Fade';
 
 import {
   Container,
@@ -18,26 +19,30 @@ export default function Links() {
   return (
     <Container>
       <Content>
-        <TextContainer>
-          <h2>Contatos</h2>
-          <p>
-            Quer trocar uma ideia? Entre em contato comigo através das redes
-            sociais ou email.
-          </p>
-        </TextContainer>
-        <LinksContainer>
-          {socialLinks.map(l => {
-            const Icon = getCorrectIcon(l.name);
-            return (
-              <Link>
-                <a href={l.url} target="blank">
-                  <Icon size={30} />
-                </a>
-                <strong>{l.title}</strong>
-              </Link>
-            );
-          })}
-        </LinksContainer>
+        <Fade>
+          <TextContainer>
+            <h2>Contatos</h2>
+            <p>
+              Quer trocar uma ideia? Entre em contato comigo através das redes
+              sociais ou email.
+            </p>
+          </TextContainer>
+        </Fade>
+        <Fade top>
+          <LinksContainer>
+            {socialLinks.map(l => {
+              const Icon = getCorrectIcon(l.name);
+              return (
+                <Link key={l.url}>
+                  <a href={l.url} target="blank">
+                    <Icon size={30} />
+                  </a>
+                  <strong>{l.title}</strong>
+                </Link>
+              );
+            })}
+          </LinksContainer>
+        </Fade>
       </Content>
     </Container>
   );
