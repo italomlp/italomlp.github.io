@@ -59,5 +59,27 @@ module.exports = {
       resolve: 'gatsby-plugin-exclude',
       options: { paths: ['/**/*styles*'] },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Italo Menezes`,
+        short_name: `italomlp`,
+        start_url: `/`,
+        background_color: `#ffffff`,
+        theme_color: `#425887`,
+        display: `standalone`,
+        icon: `static/favicon.png`,
+        lang: `pt`,
+        localize: [
+          {
+            start_url: `/en/`,
+            lang: `en`,
+            name: `Italo Menezes`,
+            short_name: `italomlp`,
+          },
+        ],
+      },
+    },
+    `gatsby-plugin-offline`,
   ],
 };

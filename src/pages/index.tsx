@@ -11,7 +11,7 @@ import {
   FaRegAddressCard,
 } from 'react-icons/fa';
 
-import { Layout, FullFill } from '~/components';
+import { Layout, FullFill, Seo } from '~/components';
 import {
   Intro,
   About,
@@ -40,6 +40,26 @@ export default function Home() {
 
   return (
     <Layout>
+      <Seo
+        lang={intl.locale}
+        title={intl.formatMessage({ id: 'home.title' })}
+        keywords={[
+          'italomlp',
+          'italo',
+          'menezes',
+          'italo menezes',
+          'italo menezes de lima poroca',
+          'react',
+          'reactjs',
+          'desenvolvedor',
+          'developer',
+          'mobile',
+          'frontend',
+          'fullstack',
+          'react native',
+          'nodejs',
+        ]}
+      />
       <div id="outer-container">
         <Menu
           right

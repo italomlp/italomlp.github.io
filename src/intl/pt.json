@@ -11,8 +11,14 @@
     "app": "Aplicativo",
     "source": "Código fonte",
     "post": "Publicação",
-    "notFound": "Não encontrado",
     "home": "Início"
+  },
+  "404": {
+    "title": "404 - Não encontrado",
+    "notFound": "Não encontrado"
+  },
+  "home": {
+    "title": "Início"
   },
   "sectionNames": {
     "about": "Sobre",

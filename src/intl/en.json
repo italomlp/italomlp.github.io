@@ -11,8 +11,14 @@
     "app": "App",
     "source": "Source code",
     "post": "Post",
-    "notFound": "Not found",
     "home": "Home"
+  },
+  "404": {
+    "title": "404 - Not found",
+    "notFound": "Not found"
+  },
+  "home": {
+    "title": "Home"
   },
   "sectionNames": {
     "about": "About",
