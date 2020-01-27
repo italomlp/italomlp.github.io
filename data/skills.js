@@ -1,54 +1,58 @@
 module.exports = [
   {
     name: 'HTML',
-    level: 70,
+    level: 85,
   },
   {
     name: 'CSS',
-    level: 60,
+    level: 75,
   },
   {
     name: 'Javascript',
-    level: 80,
+    level: 90,
   },
   {
-    name: 'TypeScript',
-    level: 80,
+    name: 'Typescript',
+    level: 85,
   },
   {
     name: 'NodeJs',
-    level: 70,
-  },
-  {
-    name: 'Express',
-    level: 60,
-  },
-  {
-    name: 'MongoDB',
-    level: 60,
-  },
-  {
-    name: 'Angular',
-    level: 70,
-  },
-  {
-    name: 'React',
-    level: 60,
-  },
-  {
-    name: 'React Native',
     level: 80,
   },
   {
-    name: 'Redux',
-    level: 60,
-  },
-  {
-    name: 'Git',
+    name: 'Express',
     level: 70,
   },
   {
+    name: 'MongoDB',
+    level: 70,
+  },
+  {
+    name: 'Angular 4+',
+    level: 75,
+  },
+  {
+    name: 'ReactJs',
+    level: 80,
+  },
+  {
+    name: 'React Native',
+    level: 85,
+  },
+  {
+    name: 'Redux',
+    level: 70,
+  },
+  {
+    name: 'Git',
+    level: 75,
+  },
+  {
     name: 'Writing about programming',
-    level: 30,
+    level: 40,
+  },
+  {
+    name: 'English',
+    level: 65,
   },
 ];

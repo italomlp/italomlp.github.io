@@ -9,9 +9,7 @@ module.exports = [
       qtt: 1,
       unity: 'year',
     },
-    // occupation: 'Técnico (automação doméstica)',
-    intlName: 'homeTecnic',
-    // description: 'Formatação e montagem de computadores.',
+    intlName: 'homeTechnic',
   },
   {
     company: 'Embedded/Sony',
@@ -24,9 +22,6 @@ module.exports = [
       unity: 'month',
     },
     intlName: 'sonyEmbedded',
-    // occupation: 'Q&A Tester',
-    // description:
-    //   'Participava da equipe de qualidade do Laboratório de Sistemas Embarcados (Embedded) na sala da Sony - UFCG, sendo responsável por auxiliar desenvolvedores no ambiente de desenvolvimento, e garantir qualidade de software através de testes.',
   },
   {
     company: 'Home/StSoft',
@@ -36,9 +31,6 @@ module.exports = [
     },
     duration: null,
     intlName: 'stsoft',
-    // occupation: 'Fullstack developer',
-    // description:
-    //   'Desenvolvedor Web full stack, utilizando MEAN Stack, trabalhando principalmente em dashboards para administração de sistemas de simples a complexos.',
   },
   {
     company: 'Igor Zahir',
@@ -51,12 +43,13 @@ module.exports = [
       unity: 'month',
     },
     intlName: 'igorzahir',
-    // occupation: 'Web developer',
-    // description: 'Construção de website para Igor Zahir',
-    links: [{ title: 'Site', url: 'https://www.igorzahir.com' }],
+    links: [
+      { title: 'general.site', url: 'https://www.igorzahir.com' },
+      { title: 'general.source', url: 'https://github.com/italomlp/igorzahir' },
+    ],
   },
   {
-    company: 'IgorZahir',
+    company: 'Igor Zahir',
     begin: {
       month: 3,
       year: 2019,
@@ -66,8 +59,88 @@ module.exports = [
       unity: 'week',
     },
     intlName: 'novum',
-    // occupation: 'Web developer',
-    // description: 'Construção de website para plataforma de tendências Novum',
-    links: [{ title: 'Site', url: 'https://novum.igorzahir.com' }],
+    links: [
+      { title: 'general.site', url: 'https://novum.igorzahir.com' },
+      { title: 'general.source', url: 'https://github.com/italomlp/novum' },
+    ],
+  },
+  {
+    company: 'Me',
+    begin: {
+      month: 12,
+      year: 2019,
+    },
+    duration: {
+      qtt: 2,
+      unity: 'week',
+    },
+    intlName: 'cabenomeubolso',
+    links: [
+      {
+        title: 'general.app',
+        url: 'https://play.google.com/store/apps/details?id=com.cabenomeubolso',
+      },
+      {
+        title: 'general.source',
+        url: 'https://github.com/italomlp/cabenomeubolso',
+      },
+    ],
+  },
+  {
+    company: 'Popcode',
+    begin: {
+      month: 3,
+      year: 2019,
+    },
+    duration: {
+      qtt: 5,
+      unity: 'month',
+    },
+    intlName: 'popcode',
+  },
+  {
+    company: 'Me',
+    begin: {
+      month: 9,
+      year: 2019,
+    },
+    duration: {
+      qtt: 1,
+      unity: 'week',
+    },
+    intlName: 'hounter',
+    links: [
+      {
+        title: 'general.site',
+        url: 'https://hounter-br.italomlp.com/',
+      },
+      {
+        title: 'general.source',
+        url: 'https://github.com/italomlp/hounter-br',
+      },
+    ],
+  },
+  {
+    company: 'DevTo',
+    begin: {
+      month: 5,
+      year: 2019,
+    },
+    duration: {
+      qtt: 1,
+      unity: 'week',
+    },
+    intlName: 'devto.unform',
+    links: [
+      {
+        title: 'general.post',
+        url:
+          'https://dev.to/italomlp/unform-the-definitive-form-library-for-react-apps-35lh',
+      },
+      {
+        title: 'general.source',
+        url: 'https://github.com/italomlp/unform-example',
+      },
+    ],
   },
 ];

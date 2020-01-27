@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import Fade from 'react-reveal/Fade';
 import { useIntl } from 'gatsby-plugin-intl';
 
@@ -6,6 +6,15 @@ import { Container, Avatar, Content, TextContainer } from './styles';
 
 export default function Resume() {
   const intl = useIntl();
+
+  const getMyAge = useCallback(() => {
+    const now = new Date();
+    const age = now.getFullYear() - 1997;
+    if ((now.getMonth() === 9 && now.getDate() >= 9) || now.getMonth() > 9) {
+      return age;
+    }
+    return age - 1;
+  }, []);
 
   return (
     <Container>
@@ -25,7 +34,10 @@ export default function Resume() {
           <Fade right>
             <h2>{intl.formatMessage({ id: 'about.completeTitle' })}</h2>
             <p>
-              {intl.formatMessage({ id: 'about.description' })}
+              {intl.formatMessage(
+                { id: 'about.description' },
+                { age: getMyAge() }
+              )}
             </p>
           </Fade>
         </TextContainer>

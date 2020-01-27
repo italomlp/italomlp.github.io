@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import ActivityTimeline from '@bit/nexxtway.react-rainbow.activity-timeline';
 import TimelineMarker from '@bit/nexxtway.react-rainbow.timeline-marker';
 import Fade from 'react-reveal/Fade';
@@ -11,6 +11,32 @@ import { Container, Content, TextContainer } from './styles';
 export default function Experience() {
   const intl = useIntl();
 
+  const sortJobs = useCallback(() => {
+    const sortedJobs = [...jobs];
+    sortedJobs.sort((a, b) => {
+      if (a.begin.year < b.begin.year) {
+        return -1;
+      }
+      if (a.begin.year === b.begin.year && a.begin.month < b.begin.month) {
+        return -1;
+      }
+      if (a.begin.year === b.begin.year && a.begin.month === b.begin.month) {
+        return 0;
+      }
+      return 1;
+    });
+    sortedJobs.sort((a, b) => {
+      if (!a.duration && b.duration) {
+        return 1;
+      }
+      if (a.duration && !b.duration) {
+        return -1;
+      }
+      return 0;
+    });
+    return sortedJobs;
+  }, [jobs]);
+
   return (
     <Container>
       <Content>
@@ -21,7 +47,7 @@ export default function Experience() {
           </TextContainer>
         </Fade>
         <ActivityTimeline>
-          {jobs.map((j, index) => (
+          {sortJobs().map((j, index) => (
             <Fade bottom key={index.toString()}>
               <TimelineMarker
                 label={j.company}
@@ -43,7 +69,7 @@ export default function Experience() {
                     : intl.formatMessage({ id: `general.actual` })
                 }`}
                 description={intl.formatMessage({
-                  id: `${j.intlName}.description`,
+                  id: `experience.jobs.${j.intlName}.description`,
                 })}
               >
                 {j.links &&
@@ -53,7 +79,9 @@ export default function Experience() {
                       href={l.url}
                       target="blank"
                     >
-                      {l.title}
+                      {intl.formatMessage({
+                        id: `${l.title}`,
+                      })}
                     </a>
                   ))}
               </TimelineMarker>

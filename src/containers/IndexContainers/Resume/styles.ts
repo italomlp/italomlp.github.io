@@ -38,7 +38,7 @@ export const Avatar = styled.img`
   margin-right: 30px;
 
   ${media.lessThan('large')`
-    width: 40%;
+    width: 30vw;
   `}
   ${media.lessThan('medium')`
     width: 40%;

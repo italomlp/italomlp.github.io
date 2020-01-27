@@ -26,6 +26,15 @@ export const Content = styled.div`
     background-color: ${colors.light} !important;
   }
 
+  a {
+    text-decoration: none;
+    border-bottom: 1px dotted #fff;
+
+    &:not(:last-child) {
+      margin-right: 5px;
+    }
+  }
+
   ${media.lessThan('medium')`
     padding-bottom: 30px;
     width: 100%;

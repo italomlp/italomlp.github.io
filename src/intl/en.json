@@ -6,7 +6,11 @@
     "month": "month",
     "months": "months",
     "year": "year",
-    "years": "years"
+    "years": "years",
+    "site": "Site",
+    "app": "App",
+    "source": "Source code",
+    "post": "Post"
   },
   "sectionNames": {
     "about": "About",
@@ -20,19 +24,42 @@
   },
   "about": {
     "completeTitle": "About me",
-    "description": "Me chamo Italo Menezes. Tenho 22 anos e moro no interior de Pernambuco. Trabalho como MEAN Stack (com AngularJS e Angular 2+) há mais de 2 anos, em vários sistemas, envolvendo CRUDs dos mais simples aos mais complexos, aplicados principalmente em dashboards. Curso Ciência da Computação, e tenho contato com Java 7, com padrões de design e boas práticas. Atualmente, estou me aprofundando em React Native, ReatJS e todo o ecossistema em torno dessas tecnologias. Já domino um pouco React Native, tendo feito um projeto acadêmico, projetos específicos para o curso da RocketSeat (onde estou estudando), trabalhando com isso atualmente e caminhando com um projeto pessoal. Faço uso de Redux e afins também. No mais, sou apaixonado por código, café e javascript!"
+    "description": "My name is Italo Menezes. I am {age} years old and I live in Pernambuco, Brazil. I have had contact with programming for over 5 years. I work as MEAN Stack (with AngularJS and Angular 2+) for more than 3, involving several systems, from simple CRUDs to the most complex ones, mainly applied to dashboards. I'm a full-stack developer, but my current focus is on frontend and mobile. I study Computer Science and I have contact with Java 7, Python, design patterns and good practices. At the moment, taking time off for reasons beyond my control. My strong point is Javascript and I have been deep in React Native, ReactJS and the whole ecosystem around these technologies. I have experience in React Native, having done academic projects, specific projects for the RocketSeat course (where I continue to study and update myself) and also provided services for building an app in Popcode. I also launched my first app, Cabe no Meu Bolso, in December 2019. With ReactJS I already made more than 3 institutional websites, and I like to do projects just for fun too. I like to use Redux and other technologies, like Typescript and Styled Components. In my spare time, I enjoy going out with my family, watching movies and series, programming for fun, and even taking pictures of nature. Lastly, I love to code, coffee, and javascript!"
   },
   "skills": {
-    "description": "Here are the technologies that I often use and I like more, besides of my main skills."
+    "description": "Here are the technologies that I often use and I like more, besides my main skills."
   },
   "experience": {
-    "description": "Here are most of projects that I worked or work till today. Some programming posts and material built by me are listed too.",
+    "description": "Here are most of the projects that I worked on or work until today. Some programming posts and materials built by me are listed too.",
     "jobs": {
-      "igorZahir": {
-        "description": "Website build for Igor Zahir"
+      "homeTechnic": {
+        "description": "Formatting and assembling computers."
+      },
+      "sonyEmbedded": {
+        "description": "I participated in the quality team of the Embedded Systems Laboratory in the Sony room (UFCG), being responsible for assisting developers in the development environment, and ensuring software quality through tests."
+      },
+      "igorzahir": {
+        "description": "Construction of website for Igor Zahir, using ReactJS and GatsbyJS."
       },
       "novum": {
-        "description": "Website built for a trending platform called Novum"
+        "description": "Construction of website for Novum trend platform, using ReactJS and GatsbyJS."
+      },
+      "popcode": {
+        "description": "I worked as React Native Developer in a mobile app, full time, together with 2 more developers in the same area. I performed activities to implement new features, as well as bug fixes. In the company, SCRUM was used to manage activities. It was a totally remote experience, from hiring to the end of the journey."
+      },
+      "devto": {
+        "unform": {
+          "description": "English post giving an introduction to the Rocketseat Unform forms library: <b>Unform: the definitive form library for React apps</b>"
+        }
+      },
+      "hounter": {
+        "description": "Construction of the Hounter-BR web app, which is used to calculate the number of hours worked by a corporate programmer, following Brazilian labor law. Built with ReactJS and GatsbyJS."
+      },
+      "cabenomeubolso": {
+        "description": "My first app published on the Play Store. Its idea is to help purchases that need to follow a fixed budget. For example, given a shopping list, I can spend $ 400. At the time of purchase, I need to do the math to ensure that the total does not exceed that amount. In addition, I need to know if I can place more items or larger quantities of a particular item. This idea came from a personal need, and I thought that it could help some people who can go through this too. Built with React Native, Redux, Styled Components and other technologies from this ecosystem."
+      },
+      "stsoft": {
+        "description": "Development of systems with NodeJS, ExpressJS, MongoDB, AngularJS and Angular 2+, using API REST, ES5 and ES6, and good practices. The activities involve the construction and maintenance of web systems, mostly dashboards, and back office. Totally remote experience, working as a service provider."
       }
     }
   },
