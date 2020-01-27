@@ -22,6 +22,7 @@
     "color": "^3.1.2",
     "gatsby": "^2.18.12",
     "gatsby-plugin-eslint": "^2.0.8",
+    "gatsby-plugin-exclude": "^1.0.2",
     "gatsby-plugin-google-analytics": "^2.1.31",
     "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-intl": "^0.3.2",

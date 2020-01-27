@@ -55,5 +55,9 @@ module.exports = {
         defaultLanguage: `pt`,
       },
     },
+    {
+      resolve: 'gatsby-plugin-exclude',
+      options: { paths: ['/**/styles*'] },
+    },
   ],
 };
