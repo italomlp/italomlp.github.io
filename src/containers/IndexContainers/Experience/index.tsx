@@ -68,9 +68,12 @@ export default function Experience() {
                       })}`
                     : intl.formatMessage({ id: `general.actual` })
                 }`}
-                description={intl.formatMessage({
-                  id: `experience.jobs.${j.intlName}.description`,
-                })}
+                description={intl.formatMessage(
+                  {
+                    id: `experience.jobs.${j.intlName}.description`,
+                  },
+                  { b: str => <b>{str}</b> }
+                )}
               >
                 {j.links &&
                   j.links.map((l, i) => (

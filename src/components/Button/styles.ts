@@ -43,8 +43,11 @@ export const Container = styled.button<ButtonProps>`
   border: 2px solid
     ${props => getRightColorByContrast(props.typeColor, true, true)};
   font-weight: bold;
+  box-shadow: 0 0 3px #0009;
 
   &.hvr-radial-out {
+    background-color: ${props => colors[props.typeColor]};
+
     &:before {
       border-radius: 20px;
       background: ${props =>

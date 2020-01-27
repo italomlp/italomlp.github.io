@@ -1,10 +1,17 @@
 import React from 'react';
 import { push as Menu } from 'react-burger-menu';
 import Fade from 'react-reveal/Fade';
+import { useIntl } from 'gatsby-plugin-intl';
 
-import { FiMenu } from 'react-icons/fi';
+import {
+  FaBars,
+  FaRegUserCircle,
+  FaList,
+  FaCalendarAlt,
+  FaRegAddressCard,
+} from 'react-icons/fa';
 
-// import { Container } from './styles';
+import { MenuItem, MenuItemContent } from './styles';
 import { Layout, FullFill } from '~/components';
 import {
   Intro,
@@ -16,6 +23,8 @@ import {
 } from '~/containers/IndexContainers';
 
 export default function Home() {
+  const intl = useIntl();
+
   return (
     <Layout>
       <div id="outer-container">
@@ -23,11 +32,35 @@ export default function Home() {
           right
           pageWrapId="page-wrap"
           outerContainerId="outer-container"
-          customBurgerIcon={<FiMenu />}
+          customBurgerIcon={<FaBars />}
           burgerButtonClassName="hvr-sweep-to-left"
         >
-          <a href="/">Home</a>
-          <a href="/">Sobre</a>
+          <MenuItem href="/">
+            <MenuItemContent>
+              <span>{intl.formatMessage({ id: 'sectionNames.about' })}</span>
+              <FaRegUserCircle />
+            </MenuItemContent>
+          </MenuItem>
+          <MenuItem href="/">
+            <MenuItemContent>
+              <span>{intl.formatMessage({ id: 'sectionNames.skills' })}</span>
+              <FaList />
+            </MenuItemContent>
+          </MenuItem>
+          <MenuItem href="/">
+            <MenuItemContent>
+              <span>
+                {intl.formatMessage({ id: 'sectionNames.experience' })}
+              </span>
+              <FaCalendarAlt />
+            </MenuItemContent>
+          </MenuItem>
+          <MenuItem href="/">
+            <MenuItemContent>
+              <span>{intl.formatMessage({ id: 'sectionNames.contact' })}</span>
+              <FaRegAddressCard />
+            </MenuItemContent>
+          </MenuItem>
         </Menu>
         <div id="page-wrap">
           <Fade>

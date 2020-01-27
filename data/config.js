@@ -1,6 +1,3 @@
-const skills = require('./skills');
-const jobs = require('./jobs');
-
 module.exports = {
   siteTitle: 'Italo Menezes',
   siteDescription:
@@ -18,7 +15,6 @@ module.exports = {
     'com um projeto pessoal. Faço uso de Redux e afins também.' +
     'No mais, sou apaixonado por código, café e javascript!',
   socialLinks: [
-    // twitterUsername: 'italomlp',
     {
       name: 'FaTwitter',
       url: 'https://twitter.com/italomlp',
@@ -29,7 +25,6 @@ module.exports = {
       url: 'https://www.linkedin.com/in/italomlp',
       title: 'Italo Menezes',
     },
-    // githubUsername: 'italomlp',
     {
       name: 'FaGithub',
       url: 'https://github.com/italomlp',
@@ -49,22 +44,9 @@ module.exports = {
   ],
   siteUrl: 'https://www.italomlp.com',
   pathPrefix: '/',
-  siteCover: '/images/cover.jpeg',
   googleAnalyticsId: 'UA-114612231-1',
   backgroundColor: '#ffffff',
-  themeColor: '#25303B',
+  themeColor: '#425887',
   display: 'minimal-ui',
   icon: 'src/assets/icon.png',
-  headerLinks: [
-    {
-      label: 'Italo Menezes',
-      url: '/',
-    },
-    {
-      label: 'Posts',
-      url: '/posts',
-    },
-  ],
-  skills,
-  jobs,
 };

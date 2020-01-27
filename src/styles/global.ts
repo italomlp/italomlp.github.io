@@ -32,21 +32,24 @@ export default createGlobalStyle`
 
   /* Position and sizing of burger button */
   .bm-burger-button {
-    position: fixed;
     width: 64px;
     height: 60px;
     right: 10px;
     top: 20px;
     background-color: ${colors.primaryDark};
     color: ${colors.other};
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0px 0px 5px #0007;
 
     > svg {
       width: 30px !important;
       height: 30px !important;
+    }
+
+    &, &.hvr-sweep-to-left {
+      position: fixed;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0px 0px 5px #0007;
     }
     
     &.hvr-sweep-to-left{
@@ -103,13 +106,14 @@ export default createGlobalStyle`
 
   /* Wrapper for item list */
   .bm-item-list {
-    color: #b8b7ad;
     padding: 0.8em;
   }
 
   /* Individual item */
   .bm-item {
     display: inline-block;
+    text-decoration: none;
+    color: ${colors.light};
   }
 
   /* Styling of overlay */

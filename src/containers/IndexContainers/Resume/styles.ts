@@ -36,6 +36,7 @@ export const Avatar = styled.img`
   border: 2px solid ${colors.primary};
   max-width: 400px;
   margin-right: 30px;
+  box-shadow: 0 0 10px #0009;
 
   ${media.lessThan('large')`
     width: 30vw;

@@ -27,7 +27,7 @@ export default function Resume() {
               alignItems: 'center',
             }}
           >
-            <Avatar src="assets/profile.jpeg" alt="Profile" />
+            <Avatar src="assets/profile.jpg" alt="Profile" />
           </div>
         </Fade>
         <TextContainer>
