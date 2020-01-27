@@ -1,5 +1,6 @@
 import React from 'react';
 import Fade from 'react-reveal/Fade';
+import { useIntl } from 'gatsby-plugin-intl';
 
 import {
   SkillLine,
@@ -12,16 +13,15 @@ import {
 import skills from '../../../../data/skills';
 
 export default function Skills() {
+  const intl = useIntl();
+
   return (
     <Container>
       <Content>
         <TextContainer>
           <Fade>
-            <h2>Skills</h2>
-            <p>
-              Essas são as tecnologias que mais uso e gosto, além de minhas
-              principais habilidades.
-            </p>
+            <h2>{intl.formatMessage({ id: 'sectionNames.skills' })}</h2>
+            <p>{intl.formatMessage({ id: 'skills.description' })}</p>
           </Fade>
         </TextContainer>
         {skills.map((s, index) => (

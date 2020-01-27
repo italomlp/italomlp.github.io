@@ -44,5 +44,16 @@ module.exports = {
         display: 'swap',
       },
     },
+    {
+      resolve: `gatsby-plugin-intl`,
+      options: {
+        // language JSON resource path
+        path: `${__dirname}/src/intl`,
+        // supported language
+        languages: [`en`, `pt`],
+        // language file path
+        defaultLanguage: `pt`,
+      },
+    },
   ],
 };

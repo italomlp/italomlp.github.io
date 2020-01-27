@@ -2,23 +2,22 @@ import React from 'react';
 import ActivityTimeline from '@bit/nexxtway.react-rainbow.activity-timeline';
 import TimelineMarker from '@bit/nexxtway.react-rainbow.timeline-marker';
 import Fade from 'react-reveal/Fade';
+import { useIntl } from 'gatsby-plugin-intl';
 
 import jobs from '../../../../data/jobs';
 
 import { Container, Content, TextContainer } from './styles';
 
 export default function Experience() {
+  const intl = useIntl();
+
   return (
     <Container>
       <Content>
         <Fade top>
           <TextContainer>
-            <h2>Experiência</h2>
-            <p>
-              Aqui estão a maioria dos projetos em que trabalhei ou trabalho
-              atualmente. Também estão listados alguns posts ou materiais
-              relacionados à programação feitos por mim.
-            </p>
+            <h2>{intl.formatMessage({ id: 'sectionNames.experience' })}</h2>
+            <p>{intl.formatMessage({ id: 'experience.description' })}</p>
           </TextContainer>
         </Fade>
         <ActivityTimeline>
@@ -26,10 +25,26 @@ export default function Experience() {
             <Fade bottom key={index.toString()}>
               <TimelineMarker
                 label={j.company}
-                datetime={`${j.begin.month}/${j.begin.year} - ${
-                  j.duration ? j.duration : 'atual'
+                datetime={`${intl.formatDate(
+                  new Date(j.begin.year, j.begin.month - 1),
+                  {
+                    year: 'numeric',
+                    month: 'long',
+                  }
+                )} - ${
+                  j.duration
+                    ? `${j.duration.qtt} ${intl.formatMessage({
+                        id: `general.${
+                          j.duration.qtt > 1
+                            ? `${j.duration.unity}s`
+                            : j.duration.unity
+                        }`,
+                      })}`
+                    : intl.formatMessage({ id: `general.actual` })
                 }`}
-                description={j.description}
+                description={intl.formatMessage({
+                  id: `${j.intlName}.description`,
+                })}
               >
                 {j.links &&
                   j.links.map((l, i) => (

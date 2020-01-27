@@ -1,0 +1,46 @@
+{
+  "general": {
+    "actual": "actual",
+    "week": "week",
+    "weeks": "weeks",
+    "month": "month",
+    "months": "months",
+    "year": "year",
+    "years": "years"
+  },
+  "sectionNames": {
+    "about": "About",
+    "contact": "Contact",
+    "skills": "Skills",
+    "experience": "Experience"
+  },
+  "intro": {
+    "iAmDev": "I'm a {devType} developer!",
+    "niceToMeet": "Pleasure, "
+  },
+  "about": {
+    "completeTitle": "About me",
+    "description": "Me chamo Italo Menezes. Tenho 22 anos e moro no interior de Pernambuco. Trabalho como MEAN Stack (com AngularJS e Angular 2+) há mais de 2 anos, em vários sistemas, envolvendo CRUDs dos mais simples aos mais complexos, aplicados principalmente em dashboards. Curso Ciência da Computação, e tenho contato com Java 7, com padrões de design e boas práticas. Atualmente, estou me aprofundando em React Native, ReatJS e todo o ecossistema em torno dessas tecnologias. Já domino um pouco React Native, tendo feito um projeto acadêmico, projetos específicos para o curso da RocketSeat (onde estou estudando), trabalhando com isso atualmente e caminhando com um projeto pessoal. Faço uso de Redux e afins também. No mais, sou apaixonado por código, café e javascript!"
+  },
+  "skills": {
+    "description": "Here are the technologies that I often use and I like more, besides of my main skills."
+  },
+  "experience": {
+    "description": "Here are most of projects that I worked or work till today. Some programming posts and material built by me are listed too.",
+    "jobs": {
+      "igorZahir": {
+        "description": "Website build for Igor Zahir"
+      },
+      "novum": {
+        "description": "Website built for a trending platform called Novum"
+      }
+    }
+  },
+  "contact": {
+    "description": "Want to talk with me? Contact me by one of the options below."
+  },
+  "footer": {
+    "description": "Very nice to see that you still here! I hope to know you better! :)",
+    "copyright": "Copyright"
+  }
+}

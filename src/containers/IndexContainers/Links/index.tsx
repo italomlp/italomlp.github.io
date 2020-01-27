@@ -1,6 +1,7 @@
 import React from 'react';
 import * as AllIcons from 'react-icons/fa';
 import Fade from 'react-reveal/Fade';
+import { useIntl } from 'gatsby-plugin-intl';
 
 import {
   Container,
@@ -16,16 +17,14 @@ const getCorrectIcon = (name: string) => {
 };
 
 export default function Links() {
+  const intl = useIntl();
   return (
     <Container>
       <Content>
         <Fade>
           <TextContainer>
-            <h2>Contatos</h2>
-            <p>
-              Quer trocar uma ideia? Entre em contato comigo através das redes
-              sociais ou email.
-            </p>
+            <h2>{intl.formatMessage({ id: 'sectionNames.contact' })}</h2>
+            <p>{intl.formatMessage({ id: 'contact.description' })}</p>
           </TextContainer>
         </Fade>
         <Fade top>

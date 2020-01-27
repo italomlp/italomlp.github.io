@@ -3,12 +3,6 @@ declare module 'react-reveal' {
   export default interface ReactReveal {}
 }
 
-declare module 'react-reveal/Slide' {
-  import React from 'react';
-
-  export default React.Component;
-}
-
 declare module 'react-reveal/Fade' {
   import React from 'react';
 
