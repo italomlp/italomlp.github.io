@@ -37,10 +37,10 @@ export default function Intro() {
           </h1>
         </IntroContainer>
         <ButtonsContainer>
-          <Button typeColor="primary" onClick={() => scroll('resume')}>
+          <Button typeColor="primary" onClick={() => scroll('about')}>
             {intl.formatMessage({ id: 'sectionNames.about' })}
           </Button>
-          <Button typeColor="secondary" onClick={() => scroll('links')}>
+          <Button typeColor="secondary" onClick={() => scroll('contact')}>
             {intl.formatMessage({ id: 'sectionNames.contact' })}
           </Button>
         </ButtonsContainer>

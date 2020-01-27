@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useCallback } from 'react';
 import { push as Menu } from 'react-burger-menu';
 import Fade from 'react-reveal/Fade';
 import { useIntl } from 'gatsby-plugin-intl';
@@ -11,19 +11,32 @@ import {
   FaRegAddressCard,
 } from 'react-icons/fa';
 
-import { MenuItem, MenuItemContent } from './styles';
 import { Layout, FullFill } from '~/components';
 import {
   Intro,
-  Resume,
+  About,
   Skills,
   Experience,
-  Links,
+  Contact,
   Footer,
 } from '~/containers/IndexContainers';
+import useScrollTo from '~/helpers/hooks/useScrollTo';
+
+import {
+  MenuItem,
+  MenuItemContent,
+  LangsContainer,
+  LangButton,
+} from './styles';
 
 export default function Home() {
   const intl = useIntl();
+  const { scroll } = useScrollTo();
+  const [menuOpen, setMenuOpen] = useState(false);
+  const scrollTo = useCallback((id: string) => {
+    scroll(id);
+    setMenuOpen(false);
+  }, []);
 
   return (
     <Layout>
@@ -34,20 +47,27 @@ export default function Home() {
           outerContainerId="outer-container"
           customBurgerIcon={<FaBars />}
           burgerButtonClassName="hvr-sweep-to-left"
+          isOpen={menuOpen}
+          onStateChange={state => setMenuOpen(state.isOpen)}
         >
-          <MenuItem href="/">
+          <LangsContainer>
+            <LangButton to="/">PT</LangButton>
+            <LangButton to="/en">EN</LangButton>
+          </LangsContainer>
+
+          <MenuItem onClick={() => scrollTo('about')}>
             <MenuItemContent>
               <span>{intl.formatMessage({ id: 'sectionNames.about' })}</span>
               <FaRegUserCircle />
             </MenuItemContent>
           </MenuItem>
-          <MenuItem href="/">
+          <MenuItem onClick={() => scrollTo('skills')}>
             <MenuItemContent>
               <span>{intl.formatMessage({ id: 'sectionNames.skills' })}</span>
               <FaList />
             </MenuItemContent>
           </MenuItem>
-          <MenuItem href="/">
+          <MenuItem onClick={() => scrollTo('experience')}>
             <MenuItemContent>
               <span>
                 {intl.formatMessage({ id: 'sectionNames.experience' })}
@@ -55,7 +75,7 @@ export default function Home() {
               <FaCalendarAlt />
             </MenuItemContent>
           </MenuItem>
-          <MenuItem href="/">
+          <MenuItem onClick={() => scrollTo('contact')}>
             <MenuItemContent>
               <span>{intl.formatMessage({ id: 'sectionNames.contact' })}</span>
               <FaRegAddressCard />
@@ -72,8 +92,8 @@ export default function Home() {
               >
                 <Intro />
               </FullFill>
-              <FullFill scrollName="resume" skew bgColor="other">
-                <Resume />
+              <FullFill scrollName="about" skew bgColor="other">
+                <About />
               </FullFill>
               <FullFill
                 scrollName="skills"
@@ -93,12 +113,12 @@ export default function Home() {
                 <Experience />
               </FullFill>
               <FullFill
-                scrollName="links"
+                scrollName="contact"
                 skew
                 bgColor="other"
                 fullFill={false}
               >
-                <Links />
+                <Contact />
               </FullFill>
               <FullFill
                 scrollName="footer"
