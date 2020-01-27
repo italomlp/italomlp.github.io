@@ -17,16 +17,36 @@ module.exports = {
     'para o curso da RocketSeat (onde estou estudando), trabalhando com isso atualmente e caminhando' +
     'com um projeto pessoal. Faço uso de Redux e afins também.' +
     'No mais, sou apaixonado por código, café e javascript!',
-  social: {
-    twitterUsername: 'italomlp',
-    twitter: 'https://twitter.com/italomlp',
-    linkedin: 'https://www.linkedin.com/in/italomlp',
-    githubUsername: 'italomlp',
-    github: 'https://github.com/italomlp',
-    devTo: 'https://dev.to/italomlp',
-    email: 'italomlporoca@hotmail.com',
-    secondaryEmail: 'contato@italomlp.com',
-  },
+  socialLinks: [
+    // twitterUsername: 'italomlp',
+    {
+      name: 'FaTwitter',
+      url: 'https://twitter.com/italomlp',
+      title: '@italomlp',
+    },
+    {
+      name: 'FaLinkedin',
+      url: 'https://www.linkedin.com/in/italomlp',
+      title: 'Italo Menezes',
+    },
+    // githubUsername: 'italomlp',
+    {
+      name: 'FaGithub',
+      url: 'https://github.com/italomlp',
+      title: '@italomlp',
+    },
+    { name: 'FaDev', url: 'https://dev.to/italomlp', title: '@italomlp' },
+    {
+      name: 'FaEnvelope',
+      url: 'mailto:italomlporoca@hotmail.com',
+      title: 'italomlporoca@hotmail.com',
+    },
+    {
+      name: 'FaEnvelopeSquare',
+      url: 'mailto:contato@italomlp.com',
+      title: 'contato@italomlp.com',
+    },
+  ],
   siteUrl: 'https://www.italomlp.com',
   pathPrefix: '/',
   siteCover: '/images/cover.jpeg',

@@ -10,6 +10,7 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 20px 0;
 `;
 
 export const Content = styled.div`
@@ -44,7 +45,7 @@ export const SkillContainer = styled.div`
 
   strong {
     ${media.lessThan('medium')`
-      margin-bottom: -3vh;
+      margin-bottom: -5px;
     `}
   }
 `;

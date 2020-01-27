@@ -24,14 +24,14 @@ export default function Skills() {
             </p>
           </Fade>
         </TextContainer>
-        <Fade right>
-          {skills.map((s, index) => (
-            <SkillContainer key={index.toString()}>
+        {skills.map((s, index) => (
+          <SkillContainer key={index.toString()}>
+            <Fade right>
               <strong>{s.name}</strong>
               <SkillLine percent={s.level} />
-            </SkillContainer>
-          ))}
-        </Fade>
+            </Fade>
+          </SkillContainer>
+        ))}
       </Content>
     </Container>
   );

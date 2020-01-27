@@ -12,6 +12,7 @@ import {
   Skills,
   Experience,
   Links,
+  Footer,
 } from '~/containers/IndexContainers';
 
 export default function Home() {
@@ -66,9 +67,16 @@ export default function Home() {
               >
                 <Links />
               </FullFill>
-              {/* <FullFill skew skewInverse>
-                Contact
-              </FullFill> */}
+              <FullFill
+                scrollName="footer"
+                skew
+                skewInverse
+                bgColor="primary"
+                textColorInverse
+                fullFill={false}
+              >
+                <Footer />
+              </FullFill>
             </div>
           </Fade>
         </div>

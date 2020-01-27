@@ -4,13 +4,20 @@ import TimelineMarker from '@bit/nexxtway.react-rainbow.timeline-marker';
 
 import jobs from '../../../../data/jobs';
 
-import { Container, Content } from './styles';
+import { Container, Content, TextContainer } from './styles';
 
 export default function Experience() {
   return (
     <Container>
       <Content>
-        <h2>Experiência</h2>
+        <TextContainer>
+          <h2>Experiência</h2>
+          <p>
+            Aqui estão a maioria dos projetos em que trabalhei ou trabalho
+            atualmente. Também estão listados alguns posts ou materiais
+            relacionados à programação feitos por mim.
+          </p>
+        </TextContainer>
         <ActivityTimeline>
           {jobs.map((j, index) => (
             <TimelineMarker

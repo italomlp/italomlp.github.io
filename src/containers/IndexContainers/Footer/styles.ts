@@ -1,7 +1,5 @@
 import styled from 'styled-components';
-
 import media from 'styled-media-query';
-import colors from '~/styles/colors';
 
 export const Container = styled.div`
   width: 100%;
@@ -9,30 +7,24 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 20px;
 `;
 
 export const Content = styled.div`
   display: flex;
   flex-direction: column;
-  padding-bottom: 20px;
+  padding-bottom: 30px;
   width: 80%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 
-  &,
-  * {
-    color: ${colors.light} !important;
-  }
-
-  *::before {
-    background-color: ${colors.light} !important;
+  h3 {
+    margin-bottom: 15px;
   }
 
   ${media.lessThan('medium')`
     padding-bottom: 30px;
     width: 100%;
   `}
-`;
-
-export const TextContainer = styled.div`
-  width: 100%;
-  margin-bottom: 20px;
 `;
