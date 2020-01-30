@@ -8,6 +8,7 @@ import {
   FaList,
   FaCalendarAlt,
   FaRegAddressCard,
+  FaLanguage,
 } from 'react-icons/fa';
 
 import { Layout, FullFill, Seo, Fade } from '~/components';
@@ -26,6 +27,8 @@ import {
   MenuItemContent,
   LangsContainer,
   LangButton,
+  LangsContent,
+  LangsLabel,
 } from './styles';
 
 export default function Home() {
@@ -71,8 +74,14 @@ export default function Home() {
           onStateChange={state => setMenuOpen(state.isOpen)}
         >
           <LangsContainer>
-            <LangButton to="/">PT</LangButton>
-            <LangButton to="/en">EN</LangButton>
+            <LangsLabel>
+              <FaLanguage />
+              <span>{intl.formatMessage({ id: 'general.language' })}:</span>
+            </LangsLabel>
+            <LangsContent>
+              <LangButton to="/">PT</LangButton>
+              <LangButton to="/en">EN</LangButton>
+            </LangsContent>
           </LangsContainer>
 
           <MenuItem onClick={() => scrollTo('about')}>

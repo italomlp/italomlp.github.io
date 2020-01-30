@@ -11,7 +11,8 @@
     "app": "Aplicativo",
     "source": "Código fonte",
     "post": "Publicação",
-    "home": "Início"
+    "home": "Início",
+    "language": "Idioma"
   },
   "404": {
     "title": "404 - Não encontrado",

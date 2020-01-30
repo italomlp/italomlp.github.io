@@ -23,15 +23,36 @@ export const MenuItemContent = styled.div`
 export const LangsContainer = styled.div`
   margin-bottom: 30px;
   display: flex !important;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+export const LangsLabel = styled.div`
+  display: flex;
+  align-items: center;
+
+  > *:not(:last-child) {
+    margin-right: 5px;
+  }
+`;
+
+export const LangsContent = styled.div`
+  display: flex;
   justify-content: flex-end;
   align-items: center;
 `;
 
-export const LangButton = styled(Link)`
+export const LangButton = styled(Link).attrs(() => ({
+  activeStyle: {
+    fontWeight: 'bold',
+  },
+}))`
   text-decoration: none;
   color: ${colors.light};
+  padding-right: 5px;
 
   &:not(:last-child) {
     margin-right: 5px;
+    border-right: 1px solid ${colors.light};
   }
 `;

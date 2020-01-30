@@ -11,7 +11,8 @@
     "app": "App",
     "source": "Source code",
     "post": "Post",
-    "home": "Home"
+    "home": "Home",
+    "language": "Language"
   },
   "404": {
     "title": "404 - Not found",
