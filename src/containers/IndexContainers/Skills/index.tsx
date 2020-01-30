@@ -1,5 +1,4 @@
 import React from 'react';
-import Fade from 'react-reveal/Fade';
 import { useIntl } from 'gatsby-plugin-intl';
 
 import {
@@ -11,6 +10,7 @@ import {
 } from './styles';
 
 import skills from '../../../../data/skills';
+import { Fade } from '~/components';
 
 export default function Skills() {
   const intl = useIntl();

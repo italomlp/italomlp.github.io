@@ -1,6 +1,5 @@
 import React, { useState, useCallback } from 'react';
 import { push as Menu } from 'react-burger-menu';
-import Fade from 'react-reveal/Fade';
 import { useIntl } from 'gatsby-plugin-intl';
 
 import {
@@ -11,7 +10,7 @@ import {
   FaRegAddressCard,
 } from 'react-icons/fa';
 
-import { Layout, FullFill, Seo } from '~/components';
+import { Layout, FullFill, Seo, Fade } from '~/components';
 import {
   Intro,
   About,

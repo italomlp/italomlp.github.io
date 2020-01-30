@@ -1,6 +1,5 @@
 import React from 'react';
 import * as AllIcons from 'react-icons/fa';
-import Fade from 'react-reveal/Fade';
 import { useIntl } from 'gatsby-plugin-intl';
 
 import {
@@ -11,6 +10,7 @@ import {
   Link,
 } from './styles';
 import { socialLinks } from '../../../../data/config';
+import { Fade } from '~/components';
 
 const getCorrectIcon = (name: string) => {
   return AllIcons[name as keyof typeof AllIcons];

@@ -1,6 +1,5 @@
 import React from 'react';
 import TextLoop from 'react-text-loop';
-// import { scroller } from 'react-scroll';
 import { useIntl } from 'gatsby-plugin-intl';
 
 import { Button } from '~/components';

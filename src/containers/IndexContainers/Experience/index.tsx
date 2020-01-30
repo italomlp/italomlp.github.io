@@ -1,12 +1,12 @@
 import React, { useCallback } from 'react';
 import ActivityTimeline from '@bit/nexxtway.react-rainbow.activity-timeline';
 import TimelineMarker from '@bit/nexxtway.react-rainbow.timeline-marker';
-import Fade from 'react-reveal/Fade';
 import { useIntl } from 'gatsby-plugin-intl';
 
 import jobs from '../../../../data/jobs';
 
 import { Container, Content, TextContainer } from './styles';
+import { Fade } from '~/components';
 
 export default function Experience() {
   const intl = useIntl();

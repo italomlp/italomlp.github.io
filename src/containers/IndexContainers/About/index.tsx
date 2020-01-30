@@ -1,8 +1,8 @@
 import React, { useCallback } from 'react';
-import Fade from 'react-reveal/Fade';
 import { useIntl } from 'gatsby-plugin-intl';
 
 import { Container, Avatar, Content, TextContainer } from './styles';
+import { Fade } from '~/components';
 
 export default function Resume() {
   const intl = useIntl();

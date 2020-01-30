@@ -1,8 +1,8 @@
 import React from 'react';
-import Fade from 'react-reveal/Fade';
 import { useIntl } from 'gatsby-plugin-intl';
 
 import { Container, Content } from './styles';
+import { Fade } from '~/components';
 
 export default function Footer() {
   const intl = useIntl();
