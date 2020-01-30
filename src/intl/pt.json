@@ -18,7 +18,8 @@
     "notFound": "Não encontrado"
   },
   "home": {
-    "title": "Início"
+    "title": "Início",
+    "description": "Site de Italo Menezes para apresentação de skills, experiências e contatos."
   },
   "sectionNames": {
     "about": "Sobre",

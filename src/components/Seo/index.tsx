@@ -5,8 +5,8 @@ import { useStaticQuery, graphql } from 'gatsby';
 // import { Container } from './styles';
 
 type Props = {
-  description: string;
-  lang: string;
+  description?: string;
+  lang?: string;
   meta: any[];
   keywords: string[];
   title: string;

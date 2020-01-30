@@ -18,7 +18,8 @@
     "notFound": "Not found"
   },
   "home": {
-    "title": "Home"
+    "title": "Home",
+    "description": "Italo Menezes' website to show his skills, experience and contacts."
   },
   "sectionNames": {
     "about": "About",

@@ -43,6 +43,7 @@ export default function Home() {
       <Seo
         lang={intl.locale}
         title={intl.formatMessage({ id: 'home.title' })}
+        description={intl.formatMessage({ id: 'home.description' })}
         keywords={[
           'italomlp',
           'italo',
