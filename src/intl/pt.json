@@ -34,7 +34,7 @@
   },
   "about": {
     "completeTitle": "Sobre mim",
-    "description": "Me chamo Italo Menezes. Tenho 22 anos e moro no interior de Pernambuco. Tenho contato com programação há mais de 5 anos. Trabalho como MEAN Stack (com AngularJS e Angular 2+) há mais de 3, envolvendo vários sistemas, desde CRUDs simples aos mais complexos, aplicados principalmente em dashboards. Sou fullstack, mas meu foco atual está no frontend e no mobile. Curso Ciência da Computação, e tenho contato com Java 7, Python, padrões de design e boas práticas. No momento, trancado por motivos superiores à minha vontade. Meu ponto forte é Javascript e tenho me aprofundado em React Native, ReactJS e todo o ecossistema em torno dessas tecnologias. Tenho experiência em React Native, tendo feito projetos acadêmicos, projetos específicos para o curso da RocketSeat (onde continuo estudando e me atualizando) e também prestei serviços para a construção de um app na Popcode. Também lancei meu primeiro app, o Cabe no Meu Bolso, em dezembro de 2019. Com ReactJS já fiz mais de 3 sites institucionais, e gosto de fazer projetos só por diversão também. Gosto de usar Redux e outras tecnologias, como Typescript e Styled Components. Nas horas vagas, curto sair com a família, assistir filmes e séries, programar por diversão, e até tirar fotos da natureza. No mais, sou apaixonado por código, café e javascript!"
+    "description": "Me chamo Italo Menezes. Tenho {age} anos e moro no interior de Pernambuco. Tenho contato com programação há mais de 5 anos. Trabalho como MEAN Stack (com AngularJS e Angular 2+) há mais de 3, envolvendo vários sistemas, desde CRUDs simples aos mais complexos, aplicados principalmente em dashboards. Sou fullstack, mas meu foco atual está no frontend e no mobile. Curso Ciência da Computação, e tenho contato com Java 7, Python, padrões de design e boas práticas. No momento, trancado por motivos superiores à minha vontade. Meu ponto forte é Javascript e tenho me aprofundado em React Native, ReactJS e todo o ecossistema em torno dessas tecnologias. Tenho experiência em React Native, tendo feito projetos acadêmicos, projetos específicos para o curso da RocketSeat (onde continuo estudando e me atualizando) e também prestei serviços para a construção de um app na Popcode. Lancei meu primeiro app, o Cabe no Meu Bolso, em dezembro de 2019. Com ReactJS já fiz mais de 3 sites institucionais, e adoro fazer projetos só por diversão. Gosto de usar Redux e outras tecnologias, como Typescript e Styled Components. Nas horas vagas, curto sair com a família, assistir filmes e séries, programar por diversão, e até tirar fotos da natureza. No mais, sou apaixonado por código, café e javascript!"
   },
   "skills": {
     "description": "Essas são as tecnologias que mais uso e gosto, além de minhas principais habilidades."
@@ -46,7 +46,7 @@
         "description": "Formatação e montagem de computadores."
       },
       "sonyEmbedded": {
-        "description": "Participava da equipe de qualidade do Laboratório de Sistemas Embarcados (Embedded) na sala da Sony - UFCG, sendo responsável por auxiliar desenvolvedores no ambiente de desenvolvimento, e garantir qualidade de software através de testes."
+        "description": "Participava da equipe de qualidade do Laboratório de Sistemas Embarcados (Embedded) na sala da Sony - UFCG, como <b>Q&A Tester</b>, sendo responsável por auxiliar desenvolvedores no ambiente de desenvolvimento, e garantir qualidade de software através de testes."
       },
       "igorzahir": {
         "description": "Construção de website para Igor Zahir, usando ReactJS e GatsbyJS."
@@ -55,7 +55,7 @@
         "description": "Construção de website para a plataforma de tendências Novum, usando ReactJS e GatsbyJS."
       },
       "popcode": {
-        "description": "Trabalhei como React Native Developer num app mobile, full time, juntamente com mais 2 desenvolvedores da mesma área. Desempenhava atividades de implementação de novas funcionalidades, bem como correção de bugs. Na empresa, era utilizado SCRUM para o gerenciamento das atividades. Foi uma experiência totalmente remota, desde a contratação ao fim da jornada."
+        "description": "Trabalhei como <b>React Native Developer</b> num app mobile, full time, juntamente com mais 2 desenvolvedores da mesma área. Desempenhava atividades de implementação de novas funcionalidades, bem como correção de bugs. Na empresa, era utilizado SCRUM para o gerenciamento das atividades. Foi uma experiência totalmente remota, desde a contratação ao fim da jornada."
       },
       "devto": {
         "unform": {
@@ -63,13 +63,13 @@
         }
       },
       "hounter": {
-        "description": "Construção de webapp Hounter-BR, que serve para calcular o número de horas trabalhadas por um programador PJ, seguindo a legislação trabalhista brasileira. Feito com ReactJS e GatsbyJS."
+        "description": "Construção de webapp <b>Hounter-BR</b>, que serve para calcular o número de horas trabalhadas por um programador PJ, seguindo a legislação trabalhista brasileira. Feito com ReactJS e GatsbyJS."
       },
       "cabenomeubolso": {
-        "description": "Meu primeiro app publicado na Play Store. A ideia dele consiste em auxiliar compras que precisam seguir um orçamento fixo. Por exemplo, dada uma lista de compras, posso gastar R$ 400. Na hora da compra, preciso ficar fazendo as contas para garantir que o total não ultrapasse esse valor. Além disso, preciso saber se posso colocar mais itens ou maiores quantidades de um determinado item. Essa ideia veio de uma necessidade pessoal, e pensei que isso poderia auxiliar algumas pessoas que possam passar por isso também. Feito com React Native, Redux, Styled Components e outras tecnologias desse ecossistema."
+        "description": "<b>Cabe no Meu Bolso</b>: Meu primeiro app publicado na Play Store. A ideia dele consiste em auxiliar compras que precisam seguir um orçamento fixo. Por exemplo, dada uma lista de compras, posso gastar R$ 400. Na hora da compra, preciso ficar fazendo as contas para garantir que o total não ultrapasse esse valor. Além disso, preciso saber se posso colocar mais itens ou maiores quantidades de um determinado item. Essa ideia veio de uma necessidade pessoal, e pensei que isso poderia auxiliar algumas pessoas que possam passar por isso também. Feito com React Native, Redux, Styled Components, RealmDB e outras tecnologias desse ecossistema."
       },
       "stsoft": {
-        "description": "Desenvolvimento de sistemas com NodeJS, ExpressJS, MongoDB, AngularJS e Angular 2+, utilizando de API REST, ES5 e ES6, e boas práticas. As atividades envolvem construção e manutenção de sistemas web, em sua maioria dashboards e back office. Experiência totalmente remota, trabalhando como prestador de serviços."
+        "description": "Desenvolvimento de sistemas com NodeJS, ExpressJS, MongoDB, AngularJS e Angular 2+, como <b>Fullstack Developer</b>, utilizando de API REST, ES5 e ES6, e boas práticas. As atividades envolvem construção e manutenção de sistemas web, em sua maioria dashboards e back office. Experiência totalmente remota, trabalhando como prestador de serviços."
       }
     }
   },

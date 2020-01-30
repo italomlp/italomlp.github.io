@@ -46,7 +46,7 @@
         "description": "Formatting and assembling computers."
       },
       "sonyEmbedded": {
-        "description": "I participated in the quality team of the Embedded Systems Laboratory in the Sony room (UFCG), being responsible for assisting developers in the development environment, and ensuring software quality through tests."
+        "description": "I participated in the quality team of the Embedded Systems Laboratory in the Sony room (UFCG), as <b>Q&A Tester</b>, being responsible for assisting developers in the development environment, and ensuring software quality through tests."
       },
       "igorzahir": {
         "description": "Construction of website for Igor Zahir, using ReactJS and GatsbyJS."
@@ -55,7 +55,7 @@
         "description": "Construction of website for Novum trend platform, using ReactJS and GatsbyJS."
       },
       "popcode": {
-        "description": "I worked as React Native Developer in a mobile app, full time, together with 2 more developers in the same area. I performed activities to implement new features, as well as bug fixes. In the company, SCRUM was used to manage activities. It was a totally remote experience, from hiring to the end of the journey."
+        "description": "I worked as <b>React Native Developer</b> in a mobile app, full time, together with 2 more developers in the same area. I performed activities to implement new features, as well as bug fixes. In the company, SCRUM was used to manage activities. It was a totally remote experience, from hiring to the end of the journey."
       },
       "devto": {
         "unform": {
@@ -63,13 +63,13 @@
         }
       },
       "hounter": {
-        "description": "Construction of the Hounter-BR web app, which is used to calculate the number of hours worked by a corporate programmer, following Brazilian labor law. Built with ReactJS and GatsbyJS."
+        "description": "Construction of the <b>Hounter-BR</b> web app, which is used to calculate the number of hours worked by a corporate programmer, following Brazilian labor law. Built with ReactJS and GatsbyJS."
       },
       "cabenomeubolso": {
-        "description": "My first app published on the Play Store. Its idea is to help purchases that need to follow a fixed budget. For example, given a shopping list, I can spend $ 400. At the time of purchase, I need to do the math to ensure that the total does not exceed that amount. In addition, I need to know if I can place more items or larger quantities of a particular item. This idea came from a personal need, and I thought that it could help some people who can go through this too. Built with React Native, Redux, Styled Components and other technologies from this ecosystem."
+        "description": "<b>Cabe no Meu Bolso</b>: My first app published on the Play Store. Its idea is to help purchases that need to follow a fixed budget. For example, given a shopping list, I can spend $ 400. At the time of purchase, I need to do the math to ensure that the total does not exceed that amount. In addition, I need to know if I can place more items or larger quantities of a particular item. This idea came from a personal need, and I thought that it could help some people who can go through this too. Built with React Native, Redux, Styled Components, RealmDB, and other technologies from this ecosystem."
       },
       "stsoft": {
-        "description": "Development of systems with NodeJS, ExpressJS, MongoDB, AngularJS and Angular 2+, using API REST, ES5 and ES6, and good practices. The activities involve the construction and maintenance of web systems, mostly dashboards, and back office. Totally remote experience, working as a service provider."
+        "description": "Development of systems with NodeJS, ExpressJS, MongoDB, AngularJS and Angular 2+, as a <b>Fullstack Developer</b>, using API REST, ES5 and ES6, and good practices. The activities involve the construction and maintenance of web systems, mostly dashboards, and back office. Totally remote experience, working as a service provider."
       }
     }
   },
