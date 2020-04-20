@@ -17,15 +17,15 @@ module.exports = [
   },
   {
     name: 'NodeJs',
-    level: 80,
+    level: 85,
   },
   {
     name: 'Express',
-    level: 70,
+    level: 75,
   },
   {
     name: 'MongoDB',
-    level: 70,
+    level: 75,
   },
   {
     name: 'Angular 4+',
@@ -33,11 +33,11 @@ module.exports = [
   },
   {
     name: 'ReactJs',
-    level: 80,
+    level: 85,
   },
   {
     name: 'React Native',
-    level: 85,
+    level: 90,
   },
   {
     name: 'Redux',
@@ -53,6 +53,6 @@ module.exports = [
   },
   {
     name: 'English',
-    level: 65,
+    level: 70,
   },
 ];
