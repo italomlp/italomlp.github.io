@@ -1,60 +1,109 @@
 import { ButtonHTMLAttributes } from 'react';
 import styled from 'styled-components';
-import Color from 'color';
+import { darken, lighten } from 'polished';
 
 import colors from '~/styles/colors';
 
-type ColorsType = keyof Omit<
-  typeof colors,
-  | 'primaryDark'
-  | 'primaryLight'
-  | 'secondaryDark'
-  | 'secondaryLight'
-  | 'otherDark'
-  | 'otherLight'
->;
+type ColorType = 'primary' | 'secondary' | 'other';
+type ThemeType = 'dark' | 'light' | 'normal';
 
 export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
-  typeColor: ColorsType;
+  typeColor: ColorType;
+  theme?: ThemeType;
 };
 
-const getRightColorByContrast = (
-  color: ColorsType,
-  sameColor?: boolean,
-  inverted?: boolean
-) => {
-  const darkColor = colors[`${color}Dark` as ColorsType] || colors.dark;
-  const lightColor = colors[`${color}Light` as ColorsType] || colors.light;
-  if (Color(colors[color]).contrast(Color(colors.dark)) >= 10) {
-    const rightColor = inverted ? lightColor : darkColor;
-    return sameColor ? rightColor : colors.dark;
-  }
-  const rightColor = inverted ? darkColor : lightColor;
-  return sameColor ? rightColor : colors.light;
+const themingColors = {
+  primary: {
+    dark: {
+      bg: colors.primaryDark,
+      bgHover: colors.primaryLight,
+      color: colors.primaryLight,
+      colorHover: colors.primaryDark,
+    },
+    light: {
+      bg: colors.primaryLight,
+      bgHover: colors.primaryDark,
+      color: colors.primaryDark,
+      colorHover: colors.primaryLight,
+    },
+    normal: {
+      bg: colors.primary,
+      bgHover: colors.primaryDark,
+      color: colors.primaryDark,
+      colorHover: colors.primary,
+    },
+  },
+  secondary: {
+    dark: {
+      bg: colors.secondaryDark,
+      bgHover: colors.secondaryLight,
+      color: colors.secondaryLight,
+      colorHover: colors.secondaryDark,
+    },
+    light: {
+      bg: colors.secondaryLight,
+      bgHover: colors.secondaryDark,
+      color: colors.secondaryDark,
+      colorHover: colors.secondaryLight,
+    },
+    normal: {
+      bg: colors.secondary,
+      bgHover: colors.secondaryDark,
+      color: colors.secondaryDark,
+      colorHover: colors.secondary,
+    },
+  },
+  other: {
+    dark: {
+      bg: colors.otherDark,
+      bgHover: colors.otherLight,
+      color: colors.otherLight,
+      colorHover: colors.otherDark,
+    },
+    light: {
+      bg: colors.otherLight,
+      bgHover: colors.otherDark,
+      color: colors.otherDark,
+      colorHover: colors.otherLight,
+    },
+    normal: {
+      bg: colors.other,
+      bgHover: colors.otherDark,
+      color: darken(0.2)(colors.otherDark),
+      colorHover: lighten(0.2)(colors.other),
+    },
+  },
+};
+
+const themedColor = (color: ColorType, theme: ThemeType) => {
+  const colorObj = themingColors[color];
+  return colorObj[theme];
 };
 
 export const Container = styled.button<ButtonProps>`
-  background-color: ${props => colors[props.typeColor]};
+  background-color: ${props => themedColor(props.typeColor, props.theme).bg};
   min-width: 240px;
-  color: ${props => getRightColorByContrast(props.typeColor)};
+  color: ${props => themedColor(props.typeColor, props.theme).color};
   opacity: ${props => (props.disabled ? '0.2' : '1')};
   padding: 15px 70px;
   border-radius: 20px;
-  border: 2px solid
-    ${props => getRightColorByContrast(props.typeColor, true, true)};
+  border: 2px solid ${props => themedColor(props.typeColor, props.theme).color};
   font-weight: bold;
   box-shadow: 0 0 3px #0009;
 
   &.hvr-radial-out {
-    background-color: ${props => colors[props.typeColor]};
+    background-color: ${props => themedColor(props.typeColor, props.theme).bg};
 
     &:before {
       border-radius: 20px;
-      background: ${props =>
-        colors[`${props.typeColor}Light` as ColorsType] || colors.light};
+      background: ${props => themedColor(props.typeColor, props.theme).bgHover};
     }
     &:hover {
-      color: ${props => getRightColorByContrast(props.typeColor, false, true)};
+      color: ${props => themedColor(props.typeColor, props.theme).colorHover};
     }
   }
 `;
+
+Container.defaultProps = {
+  theme: 'normal',
+};
