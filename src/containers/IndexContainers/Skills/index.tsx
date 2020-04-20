@@ -27,7 +27,10 @@ export default function Skills() {
         {skills.map((s, index) => (
           <SkillContainer key={index.toString()}>
             <Fade right>
-              <strong>{s.name}</strong>
+              <div>
+                <strong>{s.name}</strong>
+                <small>- {s.level}%</small>
+              </div>
               <SkillLine percent={s.level} />
             </Fade>
           </SkillContainer>
