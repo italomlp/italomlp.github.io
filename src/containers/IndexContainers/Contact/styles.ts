@@ -36,7 +36,7 @@ export const LinksContainer = styled.div`
   flex-wrap: wrap;
 `;
 
-export const Link = styled.div`
+export const LinkContent = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -50,5 +50,8 @@ export const Link = styled.div`
 
   a {
     text-decoration: none;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
   }
 `;

@@ -7,7 +7,7 @@ import {
   Content,
   TextContainer,
   LinksContainer,
-  Link,
+  LinkContent,
 } from './styles';
 import { socialLinks } from '../../../../data/config';
 import { Fade } from '~/components';
@@ -32,12 +32,12 @@ export default function Links() {
             {socialLinks.map(l => {
               const Icon = getCorrectIcon(l.name);
               return (
-                <Link key={l.url}>
+                <LinkContent key={l.url}>
                   <a href={l.url} target="blank">
                     <Icon size={30} />
+                    <strong>{l.title}</strong>
                   </a>
-                  <strong>{l.title}</strong>
-                </Link>
+                </LinkContent>
               );
             })}
           </LinksContainer>
