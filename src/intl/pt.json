@@ -70,6 +70,10 @@
       },
       "stsoft": {
         "description": "Desenvolvimento de sistemas com NodeJS, ExpressJS, MongoDB, AngularJS e Angular 2+, como <b>Fullstack Developer</b>, utilizando de API REST, ES5 e ES6, e boas práticas. As atividades envolvem construção e manutenção de sistemas web, em sua maioria dashboards e back office. Experiência totalmente remota, trabalhando como prestador de serviços."
+      },
+      "buky": {
+        "description": "Trabalho como <b>Desenvolvedor Full Stack</b> na construção de um app mobile, atuando principalmente como <b>Desenvolvedor React Native</b>. Desempenho atividades de implementação de novas funcionalidades, bem como fidelidade com o design (Figma) e integração com backend. Utilizamos metodologia ágil, com reuniões diárias. É uma experiência totalmente remota. A Buky é uma startup localizada nos EUA, mais sobre ela no link abaixo.",
+        "title": "Sobre a Buky"
       }
     }
   },

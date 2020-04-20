@@ -29,7 +29,10 @@ module.exports = [
       month: 1,
       year: 2017,
     },
-    duration: null,
+    duration: {
+      qtt: 3.3,
+      unity: 'year',
+    },
     intlName: 'stsoft',
   },
   {
@@ -140,6 +143,21 @@ module.exports = [
       {
         title: 'general.source',
         url: 'https://github.com/italomlp/unform-example',
+      },
+    ],
+  },
+  {
+    company: 'Buky',
+    begin: {
+      month: 2,
+      year: 2020,
+    },
+    duration: null,
+    intlName: 'buky',
+    links: [
+      {
+        title: 'experience.jobs.buky.title',
+        url: 'https://buky.me/',
       },
     ],
   },
