@@ -1,7 +1,8 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, useMemo } from 'react';
 import ActivityTimeline from '@bit/nexxtway.react-rainbow.activity-timeline';
 import TimelineMarker from '@bit/nexxtway.react-rainbow.timeline-marker';
 import { useIntl } from 'gatsby-plugin-intl';
+import { compareDesc, addYears, addMonths, addWeeks } from 'date-fns';
 
 import jobs from '../../../../data/jobs';
 
@@ -11,27 +12,48 @@ import { Fade } from '~/components';
 export default function Experience() {
   const intl = useIntl();
 
-  const sortJobs = useCallback(() => {
+  const getFinalDate = useCallback(
+    (job: {
+      begin: { month: number; year: number };
+      duration: { qtt: number; unity: string };
+    }) => {
+      const final = new Date();
+      final.setMonth(job.begin.month - 1);
+      final.setFullYear(job.begin.year);
+      if (job.duration.unity === 'year') {
+        return addYears(final, job.duration.qtt);
+      }
+      if (job.duration.unity === 'month') {
+        return addMonths(final, job.duration.qtt);
+      }
+      if (job.duration.unity === 'week') {
+        return addWeeks(final, job.duration.qtt);
+      }
+      return null;
+    },
+    []
+  );
+
+  const sortJobs = useMemo(() => {
     const sortedJobs = [...jobs];
     sortedJobs.sort((a, b) => {
-      if (a.begin.year < b.begin.year) {
-        return -1;
-      }
-      if (a.begin.year === b.begin.year && a.begin.month < b.begin.month) {
-        return -1;
-      }
-      if (a.begin.year === b.begin.year && a.begin.month === b.begin.month) {
-        return 0;
-      }
-      return 1;
-    });
-    sortedJobs.sort((a, b) => {
       if (!a.duration && b.duration) {
-        return 1;
+        return -1;
       }
       if (a.duration && !b.duration) {
-        return -1;
+        return 1;
       }
+
+      if (a.duration && b.duration) {
+        const finalA = getFinalDate(a);
+        const finalB = getFinalDate(b);
+
+        if (finalA && finalB) {
+          return compareDesc(finalA, finalB);
+        }
+        return 0;
+      }
+
       return 0;
     });
     return sortedJobs;
@@ -47,7 +69,7 @@ export default function Experience() {
           </TextContainer>
         </Fade>
         <ActivityTimeline>
-          {sortJobs().map((j, index) => (
+          {sortJobs.map((j, index) => (
             <Fade bottom key={index.toString()}>
               <TimelineMarker
                 label={j.company}
