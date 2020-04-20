@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useRef } from 'react';
 import { push as Menu } from 'react-burger-menu';
 import { useIntl } from 'gatsby-plugin-intl';
 
@@ -10,6 +10,9 @@ import {
   FaRegAddressCard,
   FaLanguage,
 } from 'react-icons/fa';
+
+import Scrollbars, { Scrollbar } from 'react-scrollbars-custom';
+import { useKey } from 'react-use';
 
 import { Layout, FullFill, Seo, Fade } from '~/components';
 import {
@@ -34,11 +37,60 @@ import {
 export default function Home() {
   const intl = useIntl();
   const { scroll } = useScrollTo();
+  const scrollRef = useRef<Scrollbar>(null);
   const [menuOpen, setMenuOpen] = useState(false);
   const scrollTo = useCallback((id: string) => {
     scroll(id);
     setMenuOpen(false);
   }, []);
+  useKey('End', () => {
+    if (scrollRef && scrollRef.current && scrollRef.current.scrollerElement) {
+      scrollRef.current.scrollerElement.scrollTo({
+        behavior: 'smooth',
+        top: scrollRef.current.scrollHeight,
+      });
+    }
+  });
+  useKey('Home', () => {
+    if (scrollRef && scrollRef.current && scrollRef.current.scrollerElement) {
+      scrollRef.current.scrollerElement.scrollTo({
+        behavior: 'smooth',
+        top: 0,
+      });
+    }
+  });
+  useKey('ArrowUp', () => {
+    if (scrollRef && scrollRef.current && scrollRef.current.scrollerElement) {
+      scrollRef.current.scrollerElement.scrollTo({
+        behavior: 'smooth',
+        top: scrollRef.current.scrollTop - 100,
+      });
+    }
+  });
+  useKey('ArrowDown', () => {
+    if (scrollRef && scrollRef.current && scrollRef.current.scrollerElement) {
+      scrollRef.current.scrollerElement.scrollTo({
+        behavior: 'smooth',
+        top: scrollRef.current.scrollTop + 100,
+      });
+    }
+  });
+  useKey('PageUp', () => {
+    if (scrollRef && scrollRef.current && scrollRef.current.scrollerElement) {
+      scrollRef.current.scrollerElement.scrollTo({
+        behavior: 'smooth',
+        top: scrollRef.current.scrollTop - window.innerHeight,
+      });
+    }
+  });
+  useKey('PageDown', () => {
+    if (scrollRef && scrollRef.current && scrollRef.current.scrollerElement) {
+      scrollRef.current.scrollerElement.scrollTo({
+        behavior: 'smooth',
+        top: scrollRef.current.scrollTop + window.innerHeight,
+      });
+    }
+  });
 
   return (
     <Layout>
@@ -111,7 +163,16 @@ export default function Home() {
             </MenuItemContent>
           </MenuItem>
         </Menu>
-        <div id="page-wrap">
+        <Scrollbars
+          ref={scrollRef}
+          removeTracksWhenNotUsed
+          disableTracksMousewheelScrolling
+          disableTracksWidthCompensation
+          minimalThumbSize={15}
+          scrollbarWidth={15}
+          noScrollX
+          id="page-wrap"
+        >
           <Fade>
             <div style={{ width: '100%', height: '100%' }}>
               <FullFill
@@ -124,12 +185,7 @@ export default function Home() {
               <FullFill scrollName="about" skew bgColor="other">
                 <About />
               </FullFill>
-              <FullFill
-                scrollName="skills"
-                skew
-                bgColor="otherDark"
-                textColorInverse
-              >
+              <FullFill scrollName="skills" skew bgColor="otherDark">
                 <Skills />
               </FullFill>
               <FullFill
@@ -161,7 +217,7 @@ export default function Home() {
               </FullFill>
             </div>
           </Fade>
-        </div>
+        </Scrollbars>
       </div>
     </Layout>
   );
