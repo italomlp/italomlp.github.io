@@ -44,6 +44,7 @@ export const SkillContainer = styled.div`
   }
 
   strong {
+    margin-right: 5px;
     ${media.lessThan('medium')`
       margin-bottom: -5px;
     `}
