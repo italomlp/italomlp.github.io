@@ -5,11 +5,12 @@ module.exports = {
   },
   extends: [
     "plugin:react/recommended",
-    "airbnb",
+    // "airbnb",
     "prettier",
     "plugin:react-hooks/recommended",
     "plugin:import/recommended",
     "plugin:import/typescript",
+    "plugin:react/jsx-runtime"
   ],
   parser: "@typescript-eslint/parser",
   parserOptions: {
