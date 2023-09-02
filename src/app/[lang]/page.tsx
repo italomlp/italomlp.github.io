@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 import { ThemeSwitcher } from '@/components/theme-switcher';
 
 export const metadata: Metadata = {
-  title: 'Query GraphQL',
+  title: 'Italo Menezes',
 };
 
 export default function Home() {
