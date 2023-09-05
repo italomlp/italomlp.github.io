@@ -8,8 +8,10 @@ export default async function Layout({
 }) {
   return (
     <ThemeProvider attribute="class">
-      <Header />
-      {children}
+      <div className="container px-8">
+        <Header />
+        {children}
+      </div>
     </ThemeProvider>
   );
 }
