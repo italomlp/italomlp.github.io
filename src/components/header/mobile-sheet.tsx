@@ -5,6 +5,7 @@ import { ReactNode } from 'react';
 import { Menu } from 'lucide-react';
 
 import {
+  Separator,
   Sheet,
   SheetContent,
   SheetDescription,
@@ -26,9 +27,10 @@ export function MobileSheet({
         <Menu />
       </SheetTrigger>
       <SheetContent side="left" className="w-full sm:w-[250px]">
-        <SheetHeader className="pt-4">
+        <SheetHeader className="mt-6">
           <SheetTitle>{header}</SheetTitle>
         </SheetHeader>
+        <Separator className="my-4" />
         <SheetDescription asChild>{content}</SheetDescription>
       </SheetContent>
     </Sheet>

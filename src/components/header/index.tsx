@@ -1,4 +1,5 @@
 import { ThemeSwitcher } from '@/components/theme-switcher';
+import { Separator } from '@/components/ui';
 import { getCurrentLocale, getScopedI18n } from '@/locales/server';
 
 import { LocaleSwitcher } from './locale-switcher';
@@ -31,15 +32,18 @@ export async function Header() {
   );
 
   return (
-    <div className="py-4">
-      <div className="justify-between hidden sm:flex">
-        {navLinks()}
-        {switcherButtons}
+    <>
+      <div className="py-4">
+        <div className="justify-between hidden sm:flex">
+          {navLinks()}
+          {switcherButtons}
+        </div>
+        <MobileSheet
+          header={switcherButtons}
+          content={navLinks(true)}
+        ></MobileSheet>
       </div>
-      <MobileSheet
-        header={switcherButtons}
-        content={navLinks(true)}
-      ></MobileSheet>
-    </div>
+      <Separator className="hidden sm:block" />
+    </>
   );
 }
