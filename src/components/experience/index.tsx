@@ -1,5 +1,7 @@
 import { TypedObject } from '@portabletext/types';
 
+import { ExternalLink } from '@/components/external-link';
+import { ShowExternalIcon } from '@/components/external-link/types';
 import { PortableAdapter } from '@/components/portable-adapter';
 import { SectionContainer } from '@/components/section-container';
 import { Separator, Typography } from '@/components/ui';
@@ -43,11 +45,10 @@ export async function Experience({ experiences }: Props) {
       <Typography variant="blockquote" className="opacity-75">
         {experienceScopedT('description')}.{' '}
         {experienceScopedT('callToLinkedin')}{' '}
-        <Typography variant="link" asChild>
-          <a href="https://www.linkedin.com/in/italomlp">
-            {experienceScopedT('profile')}
-          </a>
-        </Typography>
+        <ExternalLink href="https://www.linkedin.com/in/italomlp">
+          {experienceScopedT('profile')}
+        </ExternalLink>
+        .
       </Typography>
 
       {experiences.map((experience, index) => {
@@ -56,9 +57,12 @@ export async function Experience({ experiences }: Props) {
           <div key={experience._key} className="flex flex-col gap-2">
             <Typography>
               {experience.role} @{' '}
-              <Typography variant="link" className="font-bold" asChild>
-                <a href={experience.companyLink}>{experience.company}</a>
-              </Typography>
+              <ExternalLink
+                href={experience.companyLink}
+                showExternalIcon={ShowExternalIcon.ON_HOVER}
+              >
+                {experience.company}
+              </ExternalLink>
             </Typography>
             <Typography variant="muted">
               {getFormattedDate(experience.period)}
@@ -69,11 +73,9 @@ export async function Experience({ experiences }: Props) {
         );
       })}
       <div className="flex flex-row justify-end italic opacity-75">
-        <Typography variant="link" asChild>
-          <a href="https://www.linkedin.com/in/italomlp">
-            {experienceScopedT('checkMore')}
-          </a>
-        </Typography>
+        <ExternalLink href="https://www.linkedin.com/in/italomlp">
+          {experienceScopedT('checkMore')}
+        </ExternalLink>
       </div>
     </SectionContainer>
   );

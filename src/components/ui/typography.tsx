@@ -46,7 +46,7 @@ const variantElement: Record<
   h4: 'h4',
   paragraph: 'p',
   blockquote: 'p',
-  link: 'a',
+  link: 'p',
   muted: 'span',
 };
 
