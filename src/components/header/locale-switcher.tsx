@@ -5,7 +5,6 @@ import {
   Button,
   Tooltip,
   TooltipContent,
-  TooltipProvider,
   TooltipTrigger,
 } from '@/components/ui';
 import { useChangeLocale } from '@/locales/client';
@@ -57,18 +56,16 @@ function LanguageButton({
 export function LocaleSwitcher({ currentLocale, changeLanguageLabel }: Props) {
   return (
     <div className="flex justify-between gap-2">
-      <TooltipProvider>
-        <LanguageButton
-          changeLanguageLabel={changeLanguageLabel}
-          language="en"
-          currentLocale={currentLocale}
-        />
-        <LanguageButton
-          changeLanguageLabel={changeLanguageLabel}
-          language="pt"
-          currentLocale={currentLocale}
-        />
-      </TooltipProvider>
+      <LanguageButton
+        changeLanguageLabel={changeLanguageLabel}
+        language="en"
+        currentLocale={currentLocale}
+      />
+      <LanguageButton
+        changeLanguageLabel={changeLanguageLabel}
+        language="pt"
+        currentLocale={currentLocale}
+      />
     </div>
   );
 }

@@ -8,8 +8,6 @@ import { Button } from '@/components/ui/button';
 export function ThemeSwitcher() {
   const { theme, setTheme } = useTheme();
 
-  console.log('theme', theme);
-
   return (
     <Button
       variant="outline"

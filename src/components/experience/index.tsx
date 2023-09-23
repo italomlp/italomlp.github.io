@@ -37,7 +37,7 @@ export async function Experience({ experiences, linkedinUrl }: Props) {
   }
 
   return (
-    <SectionContainer className="pb-8">
+    <SectionContainer id="experience" className="pb-8">
       <Typography variant="h1" className="mt-8">
         {experienceScopedT('title')}
       </Typography>

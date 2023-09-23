@@ -28,7 +28,7 @@ export function ExternalLink({
 
   return (
     <Tooltip>
-      <TooltipTrigger>
+      <TooltipTrigger asChild>
         <Typography
           onMouseEnter={() => setHovering(true)}
           onMouseLeave={() => setHovering(false)}

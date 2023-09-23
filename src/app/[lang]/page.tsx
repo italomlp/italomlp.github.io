@@ -4,6 +4,7 @@ import { About } from '@/components/about';
 import { Experience } from '@/components/experience';
 import { Footer } from '@/components/footer';
 import { Hero } from '@/components/hero';
+import { Portfolio } from '@/components/portfolio';
 import { getCurrentLocale } from '@/locales/server';
 
 import { client } from '../../../sanity/lib/client';
@@ -33,7 +34,16 @@ function getData(locale: string) {
         "description": description[_key == $locale][0].value,
       } | order(period.startAt desc),
       "socialLinks": *[_type == 'authorLinks' && type == "social"],
-      "contactLinks": *[_type == 'authorLinks' && type == "contact"]
+      "contactLinks": *[_type == 'authorLinks' && type == "contact"],
+      "portfolio": *[_type == 'portfolio'] {
+        ...,
+        "title": title[_key == $locale][0].value,
+        "description": description[_key == $locale][0].value,
+        "links": links[]{
+          ...,
+          "label": label[_key == $locale][0].value
+        },
+      }
     }
   `,
     {
@@ -44,10 +54,11 @@ function getData(locale: string) {
 
 export default async function Home() {
   const locale = getCurrentLocale();
-  const { author, experiences, socialLinks, contactLinks } =
+  const { author, experiences, socialLinks, contactLinks, portfolio } =
     await getData(locale);
 
   const linkedin = socialLinks.find(link => link.url.includes('linkedin'));
+  const github = socialLinks.find(link => link.url.includes('github'));
 
   return (
     <>
@@ -66,6 +77,8 @@ export default async function Home() {
       />
 
       <Experience experiences={experiences} linkedinUrl={linkedin.url} />
+
+      <Portfolio githubUrl={github.url} portfolio={portfolio} />
 
       <Footer
         socialLinks={socialLinks}

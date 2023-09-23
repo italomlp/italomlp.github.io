@@ -5,6 +5,7 @@ export default {
     experience: 'Experience',
     portfolio: 'Portfolio',
     changeLang: 'Change language',
+    toggleTheme: 'Toggle theme',
   },
   hero: {
     greeting: "Hi! I'm {name}!",
@@ -16,10 +17,17 @@ export default {
   },
   experience: {
     title: 'Experience',
-    description: 'These are my last three experiences',
-    callToLinkedin: 'To see more, you can check my',
+    description: 'These are some of my last experiences',
+    callToAction: 'To see more, you can check my',
     profile: 'LinkedIn profile',
     checkMore: 'Check more at my LinkedIn profile',
     tillToday: 'today',
+  },
+  portfolio: {
+    title: 'Portfolio',
+    description: 'These are a few highlighted projects',
+    callToAction: 'To see more, you can check my',
+    profile: 'Github profile',
+    checkMore: 'Check more at my Github profile',
   },
 } as const;
