@@ -1,4 +1,5 @@
 import { Header } from '@/components/header';
+import { TooltipProvider } from '@/components/ui';
 import { ThemeProvider } from '@/providers/theme';
 
 export default async function Layout({
@@ -8,10 +9,12 @@ export default async function Layout({
 }) {
   return (
     <ThemeProvider attribute="class">
-      <div className="container px-8">
-        <Header />
-        {children}
-      </div>
+      <TooltipProvider>
+        <div className="container px-8">
+          <Header />
+          {children}
+        </div>
+      </TooltipProvider>
     </ThemeProvider>
   );
 }

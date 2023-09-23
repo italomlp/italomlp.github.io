@@ -1,15 +1,9 @@
 import { TypedObject } from '@portabletext/types';
 
+import { ExternalLink } from '@/components/external-link';
 import { PortableAdapter } from '@/components/portable-adapter';
 import { SectionContainer } from '@/components/section-container';
-import {
-  Badge,
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-  Typography,
-} from '@/components/ui';
+import { Badge, TooltipProvider, Typography } from '@/components/ui';
 import { getScopedI18n } from '@/locales/server';
 
 type Props = {
@@ -35,16 +29,9 @@ export async function About({ birthDate, location, skills, about }: Props) {
         <div className="flex flex-row items-center gap-2">
           <Typography>{age}</Typography>
           <Typography>{location.country}</Typography>
-          <Tooltip delayDuration={300}>
-            <TooltipTrigger asChild>
-              <Typography variant="link" asChild>
-                <a href={location.url}>{location.cityLabel}</a>
-              </Typography>
-            </TooltipTrigger>
-            <TooltipContent side="bottom">
-              {aboutScopedT('location')}
-            </TooltipContent>
-          </Tooltip>
+          <ExternalLink href={location.url} tooltip={aboutScopedT('location')}>
+            {location.cityLabel}
+          </ExternalLink>
         </div>
 
         <div className="flex flex-wrap gap-2">
