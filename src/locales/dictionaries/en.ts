@@ -6,4 +6,8 @@ export default {
     portfolio: 'Portfolio',
     changeLang: 'Change language',
   },
+  hero: {
+    greeting: "Hi! I'm {name}!",
+    avatarAlt: "{name}'s avatar",
+  },
 } as const;
