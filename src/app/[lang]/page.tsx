@@ -1,8 +1,9 @@
 import { Metadata } from 'next';
-import Image from 'next/image';
 
-import { Badge, Typography } from '@/components/ui';
-import { getCurrentLocale, getScopedI18n } from '@/locales/server';
+import { About } from '@/components/about';
+import { Experience } from '@/components/experience';
+import { Hero } from '@/components/hero';
+import { getCurrentLocale } from '@/locales/server';
 
 import { client } from '../../../sanity/lib/client';
 
@@ -10,14 +11,25 @@ export const metadata: Metadata = {
   title: 'Italo Menezes',
 };
 
-function getAuthor(locale: string) {
+function getData(locale: string) {
   return client.fetch(
     `
-    *[_id == 'author'][0] {
-      ...,
-      avatar { asset-> { url } },
-      "shortBio": shortBio[_key == $locale][0].value,
-      "about": about[_key == $locale][0].value
+    {
+      "author": *[_id == 'author'][0] {
+        ...,
+        avatar { asset-> { url } },
+        "shortBio": shortBio[_key == $locale][0].value,
+        "about": about[_key == $locale][0].value,
+        location{
+          ...,
+          "country": country[_key == $locale][0].value
+        }
+      },
+      "experiences": *[_type == 'experience'] {
+        ...,
+        "role": role[_key == $locale][0].value,
+        "description": description[_key == $locale][0].value,
+      } | order(period.startAt desc)
     }
   `,
     {
@@ -28,35 +40,25 @@ function getAuthor(locale: string) {
 
 export default async function Home() {
   const locale = getCurrentLocale();
-  const author = await getAuthor(locale);
-  const heroScopedT = await getScopedI18n('hero');
+  const { author, experiences } = await getData(locale);
 
   return (
-    <div className="flex flex-col sm:flex-row gap-8 sm:gap-12 items-center h-[calc(100vh-76px)] sm:pb-[76px]">
-      <div>
-        <Image
-          width={500}
-          height={500}
-          src={author.avatar.asset.url}
-          alt={heroScopedT('avatarAlt', { name: author.name })}
-          className="rounded-full border-4 border-secondary dark:border-white"
-        />
-      </div>
-      <div className="text-center sm:text-left">
-        <div>
-          <Typography variant="h1">
-            {heroScopedT('greeting', { name: author.name })}
-          </Typography>
-          <Typography>{author.shortBio}</Typography>
-        </div>
-        <div className="flex flex-wrap gap-2 mt-6 pb-8">
-          {author.titles.map(title => (
-            <Badge variant="secondary" key={title._key}>
-              {title.title}
-            </Badge>
-          ))}
-        </div>
-      </div>
-    </div>
+    <>
+      <Hero
+        avatarUrl={author.avatar.asset.url}
+        authorName={author.name}
+        shortBio={author.shortBio}
+        titles={author.titles}
+      />
+
+      <About
+        birthDate={author.birthDate}
+        location={author.location}
+        skills={author.skills}
+        about={author.about}
+      />
+
+      <Experience experiences={experiences} />
+    </>
   );
 }

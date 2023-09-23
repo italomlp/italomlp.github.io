@@ -39,6 +39,32 @@ export const author = defineType({
       },
     }),
     defineField({
+      type: 'object',
+      name: 'location',
+      title: 'Location',
+      validation: rule => rule.required(),
+      fields: [
+        defineField({
+          type: 'string',
+          name: 'cityLabel',
+          title: 'City Label',
+          validation: rule => rule.required(),
+        }),
+        defineField({
+          type: 'internationalizedArrayString',
+          name: 'country',
+          title: 'Country',
+          validation: rule => rule.required(),
+        }),
+        defineField({
+          type: 'url',
+          name: 'url',
+          title: 'Maps URL',
+          validation: rule => rule.required(),
+        }),
+      ],
+    }),
+    defineField({
       type: 'array',
       name: 'skills',
       title: 'Skills',

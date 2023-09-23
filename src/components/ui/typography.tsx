@@ -14,8 +14,10 @@ const typographyVariants = cva('', {
       h2: 'scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0',
       h3: 'scroll-m-20 text-2xl font-semibold tracking-tight',
       h4: 'scroll-m-20 text-xl font-semibold tracking-tight',
-      paragraph: 'leading-7 [&:not(:first-child)]:mt-6',
-      blockquote: 'mt-6 border-l-2 pl-6 italic',
+      paragraph: 'leading-7',
+      blockquote: 'border-l-2 pl-6 italic',
+      link: 'leading-7 underline decoration-accent underline-offset-4 hover:italic hover:opacity-75',
+      muted: 'text-sm text-muted-foreground',
     },
   },
   defaultVariants: {
@@ -44,6 +46,8 @@ const variantElement: Record<
   h4: 'h4',
   paragraph: 'p',
   blockquote: 'p',
+  link: 'a',
+  muted: 'span',
 };
 
 const Typography = React.forwardRef<HTMLButtonElement, TypographyProps>(

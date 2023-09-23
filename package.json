@@ -32,6 +32,7 @@
     "@types/styled-components": "^5.1.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
+    "dayjs": "^1.11.10",
     "eslint-config-next": "^13.4.19",
     "graphql": "^16.4.0",
     "lucide-react": "^0.274.0",
