@@ -9,10 +9,10 @@
 </div>
 
 <div align="center">
-  <img style="max-width: 400px; margin-left: auto; margin-right: auto;" src="./public/favicon.png">
+  <img style="max-width: 400px; margin-left: auto; margin-right: auto;" src="src/app/icon.png">
 </div>
 
-Hello there! Here is the source code of my website, that you can see [clicking here](https://www.italomlp.dev). It was made with [NextJS]() and [ReactJS](). The whole design and structure were made by me. The colors were taken by my name ones, from the [Synthesis - WHAT COLOR IS YOUR NAME?](https://synesthesia.me/see-your-name) web app.
+Hello there! Here is the source code of my website, that you can see [clicking here](https://www.italomlp.dev). It was made with [NextJS]() and [ReactJS](). The whole design and structure were made by me.
 
 Most technologies that I used:
 
