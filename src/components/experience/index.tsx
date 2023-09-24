@@ -43,8 +43,7 @@ export async function Experience({ experiences, linkedinUrl }: Props) {
       </Typography>
 
       <Typography variant="blockquote" className="opacity-75">
-        {experienceScopedT('description')}.{' '}
-        {experienceScopedT('callToLinkedin')}{' '}
+        {experienceScopedT('description')}. {experienceScopedT('callToAction')}{' '}
         <ExternalLink href={linkedinUrl}>
           {experienceScopedT('profile')}
         </ExternalLink>
