@@ -10,17 +10,12 @@ import {
 
 import { ExternalLink } from '@/components/external-link';
 import { Separator, Typography } from '@/components/ui';
-
-type Link = {
-  url: string;
-  label: string;
-  additionalDetail?: string;
-};
+import { AuthorLink } from '@/types/author-link';
 
 type Props = {
   authorName: string;
-  socialLinks: Link[];
-  contactLinks: Link[];
+  socialLinks: AuthorLink[];
+  contactLinks: AuthorLink[];
 };
 
 function getIcon(linkUrl: string) {

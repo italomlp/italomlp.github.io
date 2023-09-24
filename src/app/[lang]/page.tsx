@@ -6,6 +6,7 @@ import { Footer } from '@/components/footer';
 import { Hero } from '@/components/hero';
 import { Portfolio } from '@/components/portfolio';
 import { getCurrentLocale } from '@/locales/server';
+import { AuthorLink } from '@/types/author-link';
 
 import { client } from '../../../sanity/lib/client';
 
@@ -70,8 +71,12 @@ export default async function Home() {
   const { author, experiences, socialLinks, contactLinks, portfolio } =
     await getData(locale);
 
-  const linkedin = socialLinks.find(link => link.url.includes('linkedin'));
-  const github = socialLinks.find(link => link.url.includes('github'));
+  const linkedin = socialLinks.find((link: AuthorLink) =>
+    link.url.includes('linkedin'),
+  );
+  const github = socialLinks.find((link: AuthorLink) =>
+    link.url.includes('github'),
+  );
 
   return (
     <>
