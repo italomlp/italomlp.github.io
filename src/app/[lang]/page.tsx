@@ -9,10 +9,23 @@ import { getCurrentLocale } from '@/locales/server';
 
 import { client } from '../../../sanity/lib/client';
 
-export const metadata: Metadata = {
-  // TODO: use fetched data to populate title
-  title: 'Italo Menezes',
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const { name } = await getAuthorName();
+
+  return {
+    title: `${name} - Website`,
+  };
+}
+
+function getAuthorName() {
+  return client.fetch(
+    `
+    *[_id == 'author'][0] {
+      name
+    }
+  `,
+  );
+}
 
 function getData(locale: string) {
   return client.fetch(
