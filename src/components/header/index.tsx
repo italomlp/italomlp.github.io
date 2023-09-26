@@ -1,3 +1,4 @@
+import { MobileSheetProvider } from '@/components/header/mobile-sheet-context';
 import { ThemeSwitcher } from '@/components/theme-switcher';
 import { Separator } from '@/components/ui';
 import { getCurrentLocale, getScopedI18n } from '@/locales/server';
@@ -32,7 +33,7 @@ export async function Header() {
   );
 
   return (
-    <>
+    <MobileSheetProvider>
       <div className="py-4">
         <div className="justify-between hidden sm:flex">
           {navLinks()}
@@ -44,6 +45,6 @@ export async function Header() {
         ></MobileSheet>
       </div>
       <Separator className="hidden sm:block" />
-    </>
+    </MobileSheetProvider>
   );
 }
