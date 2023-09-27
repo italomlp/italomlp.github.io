@@ -10,7 +10,7 @@ import { getScopedI18n } from '@/locales/server';
 type Props = {
   githubUrl: string;
   portfolio: {
-    _key: string;
+    _id: string;
     title: string;
     description: TypedObject[];
     links: {
@@ -41,7 +41,7 @@ export async function Portfolio({ portfolio, githubUrl }: Props) {
       {portfolio.map((project, index) => {
         const isLast = index === portfolio.length - 1;
         return (
-          <div key={project._key} className="flex flex-col gap-2">
+          <div key={project._id} className="flex flex-col gap-2">
             <Typography fontStyle="bold">{project.title}</Typography>
             <Typography variant="muted">
               {toFormattedMonthAndYear(project.when)}

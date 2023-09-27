@@ -10,7 +10,7 @@ import { getScopedI18n } from '@/locales/server';
 type Props = {
   linkedinUrl: string;
   experiences: {
-    _key: string;
+    _id: string;
     role: string;
     company: string;
     companyLink: string;
@@ -53,7 +53,7 @@ export async function Experience({ experiences, linkedinUrl }: Props) {
       {experiences.map((experience, index) => {
         const isLast = index === experiences.length - 1;
         return (
-          <div key={experience._key} className="flex flex-col gap-2">
+          <div key={experience._id} className="flex flex-col gap-2">
             <Typography fontStyle="bold">
               {experience.role} @{' '}
               <ExternalLink
