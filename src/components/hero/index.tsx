@@ -25,6 +25,7 @@ export async function Hero({ avatarUrl, authorName, shortBio, titles }: Props) {
     >
       <div>
         <Image
+          priority
           width={500}
           height={500}
           src={avatarUrl}
