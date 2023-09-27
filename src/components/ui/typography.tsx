@@ -19,9 +19,26 @@ const typographyVariants = cva('', {
       link: 'leading-7 underline decoration-accent underline-offset-4 hover:italic hover:opacity-75',
       muted: 'text-sm text-muted-foreground',
     },
+    fontStyle: {
+      normal: '',
+      bold: 'font-bold',
+      extrabold: 'font-extrabold',
+      semibold: 'font-semibold',
+      italic: 'italic',
+      boldItalic: 'font-bold italic',
+      underline: 'underline',
+      underlineItalic: 'underline italic',
+      boldUnderline: 'font-bold underline',
+      boldUnderlineItalic: 'font-bold underline italic',
+      strikethrough: 'line-through',
+      strikethroughItalic: 'line-through italic',
+      boldStrikethrough: 'font-bold line-through',
+      boldStrikethroughItalic: 'font-bold line-through italic',
+    },
   },
   defaultVariants: {
     variant: 'paragraph',
+    fontStyle: 'normal',
   },
 });
 
@@ -51,11 +68,11 @@ const variantElement: Record<
 };
 
 const Typography = React.forwardRef<HTMLButtonElement, TypographyProps>(
-  ({ className, variant, asChild = false, ...props }, ref) => {
+  ({ className, variant, fontStyle, asChild = false, ...props }, ref) => {
     const Comp = asChild ? Slot : variantElement[variant ?? 'paragraph'];
     return (
       <Comp
-        className={cn(typographyVariants({ variant, className }))}
+        className={cn(typographyVariants({ variant, className, fontStyle }))}
         ref={ref}
         {...props}
       />

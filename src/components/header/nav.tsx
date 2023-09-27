@@ -2,8 +2,8 @@
 
 import { Home } from 'lucide-react';
 import Link from 'next/link';
-import { twMerge } from 'tailwind-merge';
 
+import { useMobileSheet } from '@/components/header/mobile-sheet-context';
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -11,6 +11,7 @@ import {
   NavigationMenuList,
   navigationMenuTriggerStyle,
 } from '@/components/ui';
+import { cn } from '@/helpers/utils';
 
 type Props = {
   links: {
@@ -22,19 +23,34 @@ type Props = {
 };
 
 export function Nav({ links, vertical }: Props) {
+  const { close } = useMobileSheet();
+
+  const onClickLink = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    e.preventDefault();
+    const href = e.currentTarget.href;
+    const targetId = href.replace(/.*\#/, '');
+    const elem = document.querySelector(`#${targetId}`);
+
+    close();
+    setTimeout(() => {
+      window.scrollTo({
+        top: elem?.getBoundingClientRect()?.top,
+        behavior: 'smooth',
+      });
+    }, 500);
+  };
+
   return (
     <NavigationMenu
-      className={twMerge(vertical ? 'w-full max-w-full [&>*]:w-full' : '')}
+      className={cn(vertical ? 'w-full max-w-full [&>*]:w-full' : '')}
     >
       <NavigationMenuList
-        className={twMerge(
-          vertical ? 'flex-col justify-normal [&>*]:w-full' : '',
-        )}
+        className={cn(vertical ? 'flex-col justify-normal [&>*]:w-full' : '')}
       >
-        <NavigationMenuItem>
+        <NavigationMenuItem onClick={close}>
           <Link href="/" legacyBehavior passHref>
             <NavigationMenuLink
-              className={twMerge(
+              className={cn(
                 navigationMenuTriggerStyle(),
                 'w-full justify-start',
               )}
@@ -47,7 +63,8 @@ export function Nav({ links, vertical }: Props) {
           <NavigationMenuItem key={link.key}>
             <Link href={link.href} legacyBehavior passHref>
               <NavigationMenuLink
-                className={twMerge(
+                onClick={onClickLink}
+                className={cn(
                   navigationMenuTriggerStyle(),
                   'w-full justify-start',
                 )}

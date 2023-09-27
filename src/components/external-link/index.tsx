@@ -16,13 +16,14 @@ type Props = {
   children: React.ReactNode;
   showExternalIcon?: boolean | 'hover';
   tooltip?: string;
-};
+} & React.ComponentPropsWithoutRef<typeof Typography>;
 
 export function ExternalLink({
   href,
   children,
   showExternalIcon = true,
   tooltip,
+  ...props
 }: Props) {
   const [hovering, setHovering] = useState(false);
 
@@ -30,6 +31,7 @@ export function ExternalLink({
     <Tooltip>
       <TooltipTrigger asChild>
         <Typography
+          {...props}
           onMouseEnter={() => setHovering(true)}
           onMouseLeave={() => setHovering(false)}
           variant="link"

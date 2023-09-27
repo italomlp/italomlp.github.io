@@ -9,7 +9,8 @@ import {
 } from 'lucide-react';
 
 import { ExternalLink } from '@/components/external-link';
-import { Separator, Typography } from '@/components/ui';
+import { Copyright } from '@/components/footer/copyright';
+import { Separator } from '@/components/ui';
 import { AuthorLink } from '@/types/author-link';
 
 type Props = {
@@ -68,9 +69,7 @@ export function Footer({ socialLinks, contactLinks, authorName }: Props) {
         </ul>
       </div>
       <div className="my-8 text-center">
-        <Typography variant="muted">
-          © {new Date().getFullYear()} {authorName}
-        </Typography>
+        <Copyright authorName={authorName} />
       </div>
     </footer>
   );
