@@ -54,11 +54,12 @@ export async function Experience({ experiences, linkedinUrl }: Props) {
         const isLast = index === experiences.length - 1;
         return (
           <div key={experience._key} className="flex flex-col gap-2">
-            <Typography>
+            <Typography fontStyle="bold">
               {experience.role} @{' '}
               <ExternalLink
                 href={experience.companyLink}
                 showExternalIcon="hover"
+                fontStyle="bold"
               >
                 {experience.company}
               </ExternalLink>
@@ -71,8 +72,8 @@ export async function Experience({ experiences, linkedinUrl }: Props) {
           </div>
         );
       })}
-      <div className="flex flex-row justify-end italic opacity-75">
-        <ExternalLink href={linkedinUrl}>
+      <div className="flex flex-row justify-end opacity-75">
+        <ExternalLink href={linkedinUrl} fontStyle="italic">
           {experienceScopedT('checkMore')}
         </ExternalLink>
       </div>

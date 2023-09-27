@@ -42,7 +42,7 @@ export async function Portfolio({ portfolio, githubUrl }: Props) {
         const isLast = index === portfolio.length - 1;
         return (
           <div key={project._key} className="flex flex-col gap-2">
-            <Typography>{project.title}</Typography>
+            <Typography fontStyle="bold">{project.title}</Typography>
             <Typography variant="muted">
               {toFormattedMonthAndYear(project.when)}
             </Typography>
@@ -58,8 +58,8 @@ export async function Portfolio({ portfolio, githubUrl }: Props) {
           </div>
         );
       })}
-      <div className="flex flex-row justify-end italic opacity-75">
-        <ExternalLink href={githubUrl}>
+      <div className="flex flex-row justify-end opacity-75">
+        <ExternalLink href={githubUrl} fontStyle="italic">
           {portfolioScopedT('checkMore')}
         </ExternalLink>
       </div>
