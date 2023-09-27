@@ -20,8 +20,10 @@ const typographyVariants = cva('', {
       muted: 'text-sm text-muted-foreground',
     },
     fontStyle: {
-      normal: 'font-normal',
+      normal: '',
       bold: 'font-bold',
+      extrabold: 'font-extrabold',
+      semibold: 'font-semibold',
       italic: 'italic',
       boldItalic: 'font-bold italic',
       underline: 'underline',
