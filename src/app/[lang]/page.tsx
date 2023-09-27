@@ -6,16 +6,18 @@ import { FloatingButton } from '@/components/floating-button';
 import { Footer } from '@/components/footer';
 import { Hero } from '@/components/hero';
 import { Portfolio } from '@/components/portfolio';
-import { getCurrentLocale, getScopedI18n } from '@/locales/server';
+import { getScopedI18n } from '@/locales/server';
 import { AuthorLink } from '@/types/author-link';
 
 import { client } from '../../../sanity/lib/client';
 
 export async function generateMetadata(): Promise<Metadata> {
   const { name } = await getAuthorName();
+  const scopedT = await getScopedI18n('meta');
 
   return {
-    title: `${name} - Website`,
+    title: `${name} - ${scopedT('title')}`,
+    description: scopedT('description'),
   };
 }
 
@@ -67,8 +69,11 @@ function getData(locale: string) {
   );
 }
 
-export default async function Home() {
-  const locale = getCurrentLocale();
+export default async function Home({
+  params: { lang: locale },
+}: {
+  params: { lang: string };
+}) {
   const { author, experiences, socialLinks, contactLinks, portfolio } =
     await getData(locale);
   const mainScopedLocale = await getScopedI18n('main');

@@ -1,4 +1,9 @@
 export default {
+  meta: {
+    title: 'Website',
+    description:
+      'This is my personal website, where I share my projects, experiences, and a little about me.',
+  },
   header: {
     hero: 'Hero',
     about: 'About',
@@ -6,6 +11,8 @@ export default {
     portfolio: 'Portfolio',
     changeLang: 'Change language',
     toggleTheme: 'Toggle theme',
+    openMenuTextSR: 'Open menu',
+    closeMenuTextSR: 'Close menu',
   },
   main: {
     backToTop: 'Back to top',

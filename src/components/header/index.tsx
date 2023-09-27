@@ -40,6 +40,8 @@ export async function Header() {
           {switcherButtons}
         </div>
         <MobileSheet
+          openMenuTextSR={scopedT('openMenuTextSR')}
+          closeMenuTextSR={scopedT('closeMenuTextSR')}
           header={switcherButtons}
           content={navLinks(true)}
         ></MobileSheet>

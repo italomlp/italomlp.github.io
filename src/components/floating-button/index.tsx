@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import debounce from 'lodash.debounce';
 import { ArrowUpIcon } from 'lucide-react';
@@ -13,16 +13,18 @@ type Props = {
 };
 
 export function FloatingButton({ children }: Props) {
-  const [offset, setOffset] = useState(window.scrollY);
-  const height = window.innerHeight;
+  const [offset, setOffset] = useState(0);
+  const height = useRef(1);
 
   useEffect(() => {
+    height.current = window.innerHeight;
+
     const onScroll = debounce(() => setOffset(window.scrollY), 100);
     window.addEventListener('scroll', onScroll);
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  const hide = offset < (height * 2) / 3;
+  const hide = offset < (height.current * 2) / 3;
 
   const onClick = () => {
     window.scroll({ top: 0, behavior: 'smooth' });

@@ -1,4 +1,9 @@
 export default {
+  meta: {
+    title: 'Website',
+    description:
+      'Este é meu site pessoal, onde compartilho projetos, experiências e um pouco sobre mim.',
+  },
   header: {
     hero: 'Hero',
     about: 'Sobre',
@@ -6,6 +11,8 @@ export default {
     portfolio: 'Portfólio',
     changeLang: 'Alterar idioma',
     toggleTheme: 'Alternar tema',
+    openMenuTextSR: 'Abrir menu',
+    closeMenuTextSR: 'Fechar menu',
   },
   main: {
     backToTop: 'Voltar ao topo',
