@@ -2,10 +2,11 @@ import { Metadata } from 'next';
 
 import { About } from '@/components/about';
 import { Experience } from '@/components/experience';
+import { FloatingButton } from '@/components/floating-button';
 import { Footer } from '@/components/footer';
 import { Hero } from '@/components/hero';
 import { Portfolio } from '@/components/portfolio';
-import { getCurrentLocale } from '@/locales/server';
+import { getCurrentLocale, getScopedI18n } from '@/locales/server';
 import { AuthorLink } from '@/types/author-link';
 
 import { client } from '../../../sanity/lib/client';
@@ -70,6 +71,7 @@ export default async function Home() {
   const locale = getCurrentLocale();
   const { author, experiences, socialLinks, contactLinks, portfolio } =
     await getData(locale);
+  const mainScopedLocale = await getScopedI18n('main');
 
   const linkedin = socialLinks.find((link: AuthorLink) =>
     link.url.includes('linkedin'),
@@ -103,6 +105,8 @@ export default async function Home() {
         contactLinks={contactLinks}
         authorName={author.name}
       />
+
+      <FloatingButton>{mainScopedLocale('backToTop')}</FloatingButton>
     </>
   );
 }

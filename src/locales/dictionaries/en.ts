@@ -7,6 +7,9 @@ export default {
     changeLang: 'Change language',
     toggleTheme: 'Toggle theme',
   },
+  main: {
+    backToTop: 'Back to top',
+  },
   hero: {
     greeting: "Hi! I'm {name}!",
     avatarAlt: "{name}'s avatar",
