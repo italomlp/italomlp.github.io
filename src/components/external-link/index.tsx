@@ -24,12 +24,7 @@ export function ExternalLink({
   return (
     <Tooltip>
       <TooltipTrigger asChild>
-        <Typography
-          {...props}
-          variant="link"
-          asChild
-          className="hover:[&_svg]:opacity-1"
-        >
+        <Typography {...props} variant="link" asChild className="group">
           <a
             href={href}
             className="inline-flex flex-row gap-1.5 items-center"
@@ -39,7 +34,7 @@ export function ExternalLink({
             {children}
             {showExternalIcon && (
               <ExternalLinkIcon
-                className="transition-all duration-150 opacity-0"
+                className="transition-all duration-150 opacity-0 w-0 group-hover:opacity-100 group-hover:w-auto"
                 size={16}
               />
             )}
