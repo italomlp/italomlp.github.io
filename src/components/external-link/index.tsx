@@ -1,6 +1,3 @@
-'use client';
-import { useState } from 'react';
-
 import { ExternalLinkIcon } from 'lucide-react';
 
 import {
@@ -9,7 +6,6 @@ import {
   TooltipTrigger,
   Typography,
 } from '@/components/ui';
-import { cn } from '@/helpers/utils';
 
 type Props = {
   href: string;
@@ -25,17 +21,14 @@ export function ExternalLink({
   tooltip,
   ...props
 }: Props) {
-  const [hovering, setHovering] = useState(false);
-
   return (
     <Tooltip>
       <TooltipTrigger asChild>
         <Typography
           {...props}
-          onMouseEnter={() => setHovering(true)}
-          onMouseLeave={() => setHovering(false)}
           variant="link"
           asChild
+          className="hover:[&_svg]:opacity-1"
         >
           <a
             href={href}
@@ -46,10 +39,7 @@ export function ExternalLink({
             {children}
             {showExternalIcon && (
               <ExternalLinkIcon
-                className={cn(
-                  'transition-all duration-150',
-                  showExternalIcon === 'hover' && !hovering && 'opacity-0',
-                )}
+                className="transition-all duration-150 opacity-0"
                 size={16}
               />
             )}
