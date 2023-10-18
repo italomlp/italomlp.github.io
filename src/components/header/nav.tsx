@@ -47,18 +47,9 @@ export function Nav({ links, vertical }: Props) {
       <NavigationMenuList
         className={cn(vertical ? 'flex-col justify-normal [&>*]:w-full' : '')}
       >
-        <NavigationMenuItem onClick={close}>
-          <Link href="/" legacyBehavior passHref>
-            <NavigationMenuLink
-              className={cn(
-                navigationMenuTriggerStyle(),
-                'w-full justify-start',
-              )}
-            >
-              <Home size={15} />
-            </NavigationMenuLink>
-          </Link>
-        </NavigationMenuItem>
+        <div className="px-4 py-2">
+          <Home size={15} />
+        </div>
         {links.map(link => (
           <NavigationMenuItem key={link.key}>
             <Link href={link.href} legacyBehavior passHref>
