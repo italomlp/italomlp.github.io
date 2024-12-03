@@ -4,6 +4,7 @@ import { ExternalLink } from '@/components/external-link';
 import { PortableAdapter } from '@/components/portable-adapter';
 import { SectionContainer } from '@/components/section-container';
 import { Badge, Typography } from '@/components/ui';
+import { yearsDifference } from '@/helpers/date';
 import { getScopedI18n } from '@/locales/server';
 
 type Props = {
@@ -19,7 +20,7 @@ type Props = {
 
 export async function About({ birthDate, location, skills, about }: Props) {
   const aboutScopedT = await getScopedI18n('about');
-  const age = new Date().getFullYear() - new Date(birthDate).getFullYear();
+  const age = yearsDifference(new Date(), birthDate);
 
   return (
     <SectionContainer id="about">

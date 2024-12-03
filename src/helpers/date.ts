@@ -30,3 +30,12 @@ export function timeDifference(date1: string | Date, date2: string | Date) {
 
   return dayjs(date2Obj).locale(currentLang).from(date1Obj, true);
 }
+
+export function yearsDifference(date1: string | Date, date2: string | Date) {
+  const currentLang = getCurrentLocale();
+
+  const date1Obj = dayjs(dateFromString(date1)).locale(currentLang);
+  const date2Obj = dayjs(dateFromString(date2)).locale(currentLang);
+
+  return date1Obj.diff(date2Obj, 'year');
+}
